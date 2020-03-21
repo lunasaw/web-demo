@@ -11,9 +11,7 @@
 	
     <artifactId>common</artifactId>
 	
-	<description>
-	    common通用工具
-	</description>
+	<description>common通用工具</description>
 
     <dependencies>
 		

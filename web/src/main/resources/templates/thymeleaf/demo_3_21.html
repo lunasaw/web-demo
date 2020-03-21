@@ -20,11 +20,32 @@
 	</head>
 </head>
 <body>
-<div class="panel-collapse collapse in">
-	<!--		获取国际化信息-->
-	<div class="panel-body" th:with="num=5">
-		<p class="text-left">1. 普通索引方式: [[#{user.password.not.match}]]</p>
-		<p class="text-left">2. 传入索引方式: [[#{user.password.retry.limit.exceed(${num})}]]</p>
+<div class="panel-group">
+	<div class="panel-default panel">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#dqpb" data-toggle="collapse" data-parent="#accordion">1.获取国际化信息</a></h4>
+		</div>
+		<div id="dqpb" class="panel-collapse collapse">
+			<div class="panel-body" th:with="num=5">
+				<p class="text-left" >获取 th:with 定义的值: [[(${num})]]</p>
+				<p class="text-left">1. 普通索引方式: [[#{user.password.not.match}]]</p>
+				<p class="text-left">2. 传入索引方式: [[#{user.password.retry.limit.exceed(${num})}]]</p>
+			</div>
+		</div>
+	</div>
+	<div class="panel-default panel">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#dqpb1" data-toggle="collapse" data-parent="#accordion">2.获取变量方式</a></h4>
+		</div>
+		<div id="dqpb1" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p class="text-left">1.获取对象的name属性: [[${user1.name}]]</p>
+				<p class="text-left">2.获取集合的元素: [[${users[0].name}]]</p>
+				<p class="text-left">3.获取Map的元素: [[${userMap['user1'].name}]]</p>
+			</div>
+		</div>
 	</div>
 </div>
 <!-- 全局js -->
