@@ -21,7 +21,7 @@
     </parent>
 
     <modules>
-        <module>thymeleaf</module>
+        <module>web</module>
         <module>common</module>
     </modules>
 
