@@ -1,9 +1,13 @@
 package com.luna.web.controller;
 
 import com.luna.web.entity.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,8 +24,8 @@ public class WebController {
     @GetMapping("demo")
     public String web(ModelMap map) {
         List<User> users = new ArrayList<>();
-        User user1 = new User("张三", 18);
-        User user2 = new User("李四", 20);
+        User user1 = new User("张三", 1);
+        User user2 = new User("李四", 2);
 
         users.add(user1);
         users.add(user2);
@@ -37,9 +41,9 @@ public class WebController {
         User[] userArray = new User[] {user1, user2};
         map.put("userArray", userArray);
 
-
-
-        return "thymeleaf/demo_3_21";
+        return "thymeleaf/demoObject";
     }
+
+
 
 }

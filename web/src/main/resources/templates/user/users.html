@@ -1,0 +1,38 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="components/head::head">
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<div class="panel-default panel">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#dqpb" data-toggle="collapse" data-parent="#accordion">1.th:each 这里是查询所有用户页面</a></h4>
+	</div>
+	<div id="dqpb" class="panel-collapse collapse">
+		<div class="panel-body">
+			<table class="table">
+				<thead>
+				<tr>
+					<th>th:text=${user.id}=>Id</th>
+					<th th:utext="'[[${user.name}]]行内样式name'"></th>
+					<th>th:text="${user.gender}==0?'女':'男'"gender</th>
+					<th>date</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr th:each="user:${users}">
+					<td th:text="${user.id}"></td>
+					<td>[[${user.name}]]</td>
+					<td th:text="${user.gender}==0?'女':'男'"></td>
+					<td th:text="${user.birth}"></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div th:replace="components/lib::lib"></div>
+</body>
+</html>

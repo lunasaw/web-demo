@@ -1,5 +1,8 @@
 package com.luna.web.entity;
 
+import javax.xml.crypto.Data;
+import java.util.Date;
+
 /**
  * @author Luna@win10
  * @date 2020/3/21 14:42
@@ -7,14 +10,32 @@ package com.luna.web.entity;
 public class User {
 
     private String name;
-    private int    age;
+    private int    id;
+    private int    gender;
+    private Date birth;
 
-	public User(String name, int age) {
-		this.name = name;
-		this.age = age;
+	public Date getBirth() {
+		return birth;
 	}
 
-	public String getName() {
+	public void setBirth(Date birth) {
+		this.birth = birth;
+	}
+
+	public int getGender() {
+        return gender;
+    }
+
+    public void setGender(int gender) {
+        this.gender = gender;
+    }
+
+    public User(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    public String getName() {
         return name;
     }
 
@@ -22,11 +43,11 @@ public class User {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public int getId() {
+        return id;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setId(int id) {
+        this.id = id;
     }
 }
