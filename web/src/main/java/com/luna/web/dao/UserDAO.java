@@ -29,7 +29,7 @@ public class UserDAO {
 
 	    Calendar calendar = DateUtils.create("1999", "11", "07");
 	    Date time = calendar.getTime();
-        user2.setBirth(time);
+	    user2.setBirth(time);
 
         users.add(user1);
         users.add(user2);

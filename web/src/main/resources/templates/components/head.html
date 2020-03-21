@@ -1,17 +1,31 @@
-<head xmlns:th="http://www.thymeleaf.org" th:fragment="head">
+<!-- 通用CSS -->
+<head xmlns:th="http://www.thymeleaf.org" th:fragment=header(title)>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="renderer" content="webkit">
-	<title>demo</title>
-	<!--[if lt IE 9]>
-	<meta http-equiv="refresh" content="0;ie.html"/>
-	<![endif]-->
-	<link th:href="@{/favicon.ico}" rel="stylesheet"/>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title th:text="${title}"></title>
+	<link rel="shortcut icon" href="favicon.ico">
 	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
-	<link th:href="@{/css/jquery.contextMenu.min.css}" rel="stylesheet"/>
 	<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet"/>
+	<!-- bootstrap-table 表格插件样式 -->
+	<link th:href="@{/ajax/libs/bootstrap-table/bootstrap-table.min.css}" rel="stylesheet"/>
 	<link th:href="@{/css/animate.css}" rel="stylesheet"/>
 	<link th:href="@{/css/style.css}" rel="stylesheet"/>
-	<link th:href="@{/css/skins.css}" rel="stylesheet"/>
 	<link th:href="@{/ruoyi/css/ry-ui.css}" rel="stylesheet"/>
 </head>
+
+
+<div class="panel-group">
+	<div class="panel-default panel">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#dqpb" data-toggle="collapse" data-parent="#accordion"></a></h4>
+		</div>
+		<div id="dqpb" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p class="text-left"></p>
+			</div>
+		</div>
+	</div>
+</div>

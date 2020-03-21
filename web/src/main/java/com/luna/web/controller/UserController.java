@@ -31,4 +31,9 @@ public class UserController {
         return "user/users";
     }
 
+    @GetMapping("user")
+    public String toAddPage(){
+    	return "user/add";
+    }
+
 }
