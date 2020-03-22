@@ -65,7 +65,83 @@
 			</div>
 		</div>
 	</div>
+	<div class="panel-default panel">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#dqpb4" data-toggle="collapse" data-parent="#accordion">5. 数字对象</a></h4>
+		</div>
+		<div id="dqpb4" class="panel-collapse collapse">
+			<div class="panel-body" th:with="num = 1000">
+				<p class="text-left">Thymeleaf 主要使用org.Thymeleaf.expression.Numbers 这个类来处理数字 在模板中使用" #numbers
+					"来表示这个对象</p>
+				一1.数字格式化 th:with="num = 1000"<p th:utext="'[[${#numbers.formatInteger(num,5)}]]'"></p>
+				<p class="text-left">[[${#numbers.formatInteger(num,5)}]]</p>
+				2.数组 <p th:utext="'${#numbers.arrayFormatInteger(arr,5)}'"></p>
+				<p class="text-left" th:each="arrNum : ${#numbers.arrayFormatInteger(arr,5)}">[[${arrNum}]]</p>
+				3.List <p th:utext="'[[${#numbers.listFormatInteger(list,5)}]]'"></p>
+				<p class="text-left">[[${#numbers.listFormatInteger(list,5)}]]</p>
+				4.Set <p th:utext="'[[${#numbers.setFormatInteger(set,5)}]]'"></p>
+				<p class="text-left">[[${#numbers.setFormatInteger(set,5)}]]</p>
+
+				二1.小数格式化 三位整数,两位小数<p th:utext="'[[${#numbers.formatDecimal(10.992, 3, 2)}]]'"></p>
+				<p class="text-left">[[${#numbers.formatDecimal(10.992, 3, 2)}]]</p>
+				2.数组 10.992 & 1299.22 <p th:utext="'${#numbers.listFormatDecimal(decimal,3,2)}'"></p>
+				<p class="text-left" th:each="arrDec : ${#numbers.listFormatDecimal(decimal,3,2)}">[[${arrDec}]]</p>
+				3.List <p th:utext="'[[${#numbers.listFormatDecimal(listDec, 2, 3)}]]'"></p>
+				<p class="text-left">[[${#numbers.listFormatDecimal(listDec, 2, 3)}]]</p>
+				4.Set <p th:utext="'[[${#numbers.setFormatDecimal(setDec, 3, 2)}]]'"></p>
+				<p class="text-left">[[${#numbers.setFormatDecimal(setDec, 3, 2)}]]</p>
+			</div>
+		</div>
+	</div>
+	<div class="panel-default panel">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#dqpb5" data-toggle="collapse" data-parent="#accordion">6. 分隔符</a></h4>
+		</div>
+		<div id="dqpb5" class="panel-collapse collapse">
+			<div class="panel-body" th:with="num = 1000">
+				三1.标识千分位分隔符 th:with="num = 1000" <p
+					th:text="'[[${#numbers.formatInteger(num,5,'+'\'POINT\''+')}]]'"></p>
+				<p class="text-left">POINT使用"."作为分隔符:[[${#numbers.formatInteger(num,5,'POINT')}]]</p>
+				2.标识千分位分隔符 th:with="num = 1000" <p th:text="'[[${#numbers.formatInteger(num,5,'+'\'COMMA\''+')}]]'"></p>
+				<p class="text-left">COMMA使用","作为分隔符:[[${#numbers.formatInteger(num,5,'COMMA')}]]</p>
+				3.标识千分位分隔符 th:with="num = 1000" <p
+					th:text="'[[${#numbers.formatInteger(num,5,'+'\'WITHSPACE\''+')}]]'"></p>
+				<p class="text-left">WHITESPACE使用" "作为分隔符:[[${#numbers.formatInteger(num,5,'WHITESPACE')}]]</p>
+				<p class="text-left"></p>
+			</div>
+		</div>
+	</div>
+	<div class="panel-default panel">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#dqpb6" data-toggle="collapse" data-parent="#accordion">7. 货币格式化</a></h4>
+		</div>
+		<div id="dqpb6" class="panel-collapse collapse">
+			<div class="panel-body">
+				1. 显示美元符号 ￥ <p th:text="'[[${#numbers.formatCurrency(10.99)}]]'"></p>
+				<p class="text-left">[[${#numbers.formatCurrency(10.99)}]]</p>
+				2. 数组=>>arrayFormatCurrency, List=>>listFormatCurrency, Set=>>setFormatCurrency 如上
+			</div>
+		</div>
+	</div>
+	<div class="panel-default panel">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#dqpb7" data-toggle="collapse" data-parent="#accordion">8. 百分比格式化</a></h4>
+		</div>
+		<div id="dqpb7" class="panel-collapse collapse">
+			<div class="panel-body">
+				1.添加百分号 % 小数点后保留三位 前两位 <p th:text="'[[${#numbers.formatPercent(0.23456, 2, 3)}]]'"></p>
+				<p class="text-left">[[${#numbers.formatPercent(0.23456, 2, 3)}]]</p>
+			</div>
+		</div>
+	</div>
 </div>
+
+
+
 <!-- 全局js -->
 <th:block th:include="components/lib :: footer"/>
 </body>

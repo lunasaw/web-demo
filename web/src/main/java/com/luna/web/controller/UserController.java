@@ -74,7 +74,6 @@ public class UserController {
 	@GetMapping("/user/{id}")
 	public String toUpdatePage(@PathVariable("id") Integer id, ModelMap map) {
 		UserDO userDO = userDAO.get(id);
-		System.out.println(userDO);
 		map.put("user", userDO);
 		List<DepartmentDO> departments = departmentDAO.getDepartmentDOs();
 		map.addAttribute("depts", departments);
@@ -93,6 +92,11 @@ public class UserController {
 		return "redirect:/users";
 	}
 
+	/**
+	 * 用户删除
+	 * @param id
+	 * @return
+	 */
 	@DeleteMapping("/user/{id}")
 	public String deleteUser(@PathVariable("id") Integer id) {
 		userDAO.delete(id);
