@@ -1,9 +1,6 @@
 package com.luna.web.rest;
 
-import com.luna.web.entity.User;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 /**
  * @author Luna@win10

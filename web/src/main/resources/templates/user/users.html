@@ -18,7 +18,8 @@
 						<th>th:text=${user.id}=>Id</th>
 						<th th:utext="'[[${user.name}]]行内样式name'"></th>
 						<th>th:text="${user.gender}==0?'女':'男'"gender</th>
-						<th>date</th>
+						<th>birthday</th>
+						<th>department</th>
 						<th>操作</th>
 					</tr>
 					</thead>
@@ -27,10 +28,13 @@
 						<td th:text="${user.id}"></td>
 						<td>[[${user.name}]]</td>
 						<td th:text="${user.gender}==0?'女':'男'"></td>
-						<td th:text="${#dates.format(user.birth,'yyyy-MM-dd HH:mm')}"></td>
+						<td th:text="${#dates.format(user.birth,'yyyy-MM-dd')}"></td>
+						<td th:text="${user.department.name}"></td>
 						<td>
-							<botton class="bottom btn btn-default">编辑</botton>
-							<botton class="bottom btn btn-danger">删除</botton>
+							<a th:href="@{/user/}+${user.id}" class="bottom btn btn-success">编辑</a>
+							<button th:attr="del_uri=@{/user/}+${user.id}" type="submit"
+							        class="bottom btn btn-danger deleteBtn">删除
+							</button>
 						</td>
 					</tr>
 					</tbody>
@@ -38,7 +42,16 @@
 			</div>
 		</div>
 	</div>
+	<form id="deleteUserForm" method="post">
+		<input type="hidden" name="_method" value="delete">
+	</form>
 </div>
-<div th:replace="components/lib::lib"></div>
+<th:block th:include="components/lib :: footer"/>
+<script>
+    $(".deleteBtn").click(function () {
+        //删除指定员工
+        $("#deleteUserForm").attr("action", $(this).attr("del_uri")).submit();
+    });
+</script>
 </body>
 </html>

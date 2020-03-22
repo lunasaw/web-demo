@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="renderer" content="webkit">
-		<title>demo</title>
-		<!--[if lt IE 9]>
-		<meta http-equiv="refresh" content="0;ie.html"/>
-		<![endif]-->
-		<link th:href="@{/favicon.ico}" rel="stylesheet"/>
-		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
-		<link th:href="@{/css/jquery.contextMenu.min.css}" rel="stylesheet"/>
-		<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet"/>
-		<link th:href="@{/css/animate.css}" rel="stylesheet"/>
-		<link th:href="@{/css/style.css}" rel="stylesheet"/>
-		<link th:href="@{/css/skins.css}" rel="stylesheet"/>
-		<link th:href="@{/ruoyi/css/ry-ui.css}" rel="stylesheet"/>
-	</head>
+	<th:block th:include="components/head::header('用户添加')"/>
 </head>
 <body>
 <div class="panel-group">
@@ -81,19 +65,8 @@
 			</div>
 		</div>
 	</div>
-
-
 </div>
 <!-- 全局js -->
-<script th:src="@{/js/jquery.min.js}"></script>
-<script th:src="@{/js/bootstrap.min.js}"></script>
-<script th:src="@{/js/plugins/metisMenu/jquery.metisMenu.js}"></script>
-<script th:src="@{/js/plugins/slimscroll/jquery.slimscroll.min.js}"></script>
-<script th:src="@{/js/jquery.contextMenu.min.js}"></script>
-<script th:src="@{/ajax/libs/blockUI/jquery.blockUI.js}"></script>
-<script th:src="@{/ajax/libs/layer/layer.min.js}"></script>
-<script th:src="@{/ruoyi/js/ry-ui.js?v=4.0.0}"></script>
-<script th:src="@{/ruoyi/index.js}"></script>
-<script th:src="@{/ajax/libs/fullscreen/jquery.fullscreen.js}"></script>
+<th:block th:include="components/lib :: footer"/>
 </body>
 </html>
