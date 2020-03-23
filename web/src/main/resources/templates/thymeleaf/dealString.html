@@ -151,8 +151,7 @@
 			<div class="panel-body">
 				1. 截取前后空格 trim <p th:text="'[[${#strings.trim('+'\'   Spring Boot   \''+')}]]'"></p>
 				<p class="text-left">trim: [[${#strings.trim(' Spring Boot ')}]]</p>
-				2. 省略 abbreviate 只显示个数加上...=指定个数的字符  <p
-					th:text="'[[${#strings.abbreviate('+'\'SpringBoot\','+'\'9\''+')}]]'"></p>
+				2. 省略 abbreviate 只显示个数加上...=指定个数的字符<p th:text="'[[${#strings.abbreviate('+'\'SpringBoot\','+'\'9\''+')}]]'"></p>
 				<p class="text-left">abbreviate: [[${#strings.abbreviate('SpringBoot', '9')}]]</p>
 				3. 随机抽取字符 randomAlphanumeric 随机获取5个字符 <p th:text="' [[${strings.randomAlphanumeric(5)}]]'"></p>
 				<p class="text-left">randomAlphanumeric: [[${#strings.randomAlphanumeric(5)}]]</p>

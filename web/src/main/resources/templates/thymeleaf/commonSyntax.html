@@ -248,16 +248,16 @@
 				th:each="user : ${users}" th:object="${user}" 将对象放入object
 				<table th:class="'table table-bordered'">
 					<thead>
-						<tr>
-							<th>用户Id</th>
-							<th>用户名</th>
-						</tr>
+					<tr>
+						<th>用户Id</th>
+						<th>用户名</th>
+					</tr>
 					</thead>
 					<tbody>
-						<tr th:each="user : ${users}" th:object="${user}">
-							<td th:text="*{id}"></td>
-							<td th:text="*{name}"></td>
-						</tr>
+					<tr th:each="user : ${users}" th:object="${user}">
+						<td th:text="*{id}"></td>
+						<td th:text="*{name}"></td>
+					</tr>
 					</tbody>
 				</table>
 			</div>
@@ -265,8 +265,6 @@
 	</div>
 
 </div>
-
-
 <th:block th:include="components/lib :: footer"/>
 </body>
 </html>

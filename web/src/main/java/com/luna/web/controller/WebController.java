@@ -95,4 +95,16 @@ public class WebController {
 		map.put("users", users);
 		return "thymeleaf/commonSyntax";
 	}
+
+	@GetMapping("fragment")
+	public String fragment(ModelMap map){
+		List<UserDO> users = new ArrayList<>();
+		UserDO user1 = new UserDO("张三", 1);
+		UserDO user2 = new UserDO("李四", 2);
+
+		users.add(user1);
+		users.add(user2);
+		map.put("users", users);
+		return "thymeleaf/fragment";
+	}
 }
