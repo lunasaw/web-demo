@@ -17,6 +17,7 @@ import java.util.*;
 @Controller
 public class WebController {
 
+
 	@GetMapping("demo")
 	public String web(ModelMap map) {
 		List<UserDO> users = new ArrayList<>();
@@ -79,5 +80,19 @@ public class WebController {
 		userDO.setBirth(DateUtils.create("1999", "11", "07", "11", "45","59").getTime());
 		map.put("user",userDO);
 		return "thymeleaf/dealString";
+	}
+
+	@GetMapping("commonSyntax")
+	public String commonSyntax(ModelMap map){
+		map.put("value","Luna");
+
+		List<UserDO> users = new ArrayList<>();
+		UserDO user1 = new UserDO("张三", 1);
+		UserDO user2 = new UserDO("李四", 2);
+
+		users.add(user1);
+		users.add(user2);
+		map.put("users", users);
+		return "thymeleaf/commonSyntax";
 	}
 }
