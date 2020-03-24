@@ -107,4 +107,24 @@ public class WebController {
 		map.put("users", users);
 		return "thymeleaf/fragment";
 	}
+
+	@GetMapping("inlining")
+	public String inlining(ModelMap map){
+		UserDO user1 = new UserDO("张三", 1);
+		map.put("user1",user1);
+
+		List<UserDO> users = new ArrayList<>();
+		UserDO user2 = new UserDO("李四", 2);
+
+		users.add(user1);
+		users.add(user2);
+		map.put("userList", users);
+
+		Map<String, UserDO> userMap = new HashMap<>();
+		userMap.put("user1", user1);
+		userMap.put("user2", user2);
+		map.put("userMap", userMap);
+
+		return "thymeleaf/inlining";
+	}
 }
