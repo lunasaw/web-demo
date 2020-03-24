@@ -40,7 +40,7 @@ public class WebController {
 
 		//数字对象 放置数组
 		Integer[] integers = new Integer[]{200, 211};
-		map.put("arr",integers);
+		map.put("arr", integers);
 
 		//数字处理 放置list 对象
 		List<Integer> integerList = new ArrayList<>();
@@ -48,43 +48,43 @@ public class WebController {
 		integerList.add(999);
 		map.put("list", integerList);
 
-		Set<Integer> set =new HashSet<>();
+		Set<Integer> set = new HashSet<>();
 		set.add(300);
 		set.add(9467);
-		map.put("set",set);
+		map.put("set", set);
 
 		BigDecimal value1 = BigDecimal.valueOf(10.992);
 		BigDecimal value2 = BigDecimal.valueOf(1299.22);
 		//小数数组
-		BigDecimal[] bigDecimals=new BigDecimal[]{value1,value2};
-		map.put("decimal",bigDecimals);
+		BigDecimal[] bigDecimals = new BigDecimal[]{value1, value2};
+		map.put("decimal", bigDecimals);
 
 		//小数List
-		List<BigDecimal> bigDecimalList=new ArrayList<>();
+		List<BigDecimal> bigDecimalList = new ArrayList<>();
 		bigDecimalList.add(value1);
 		bigDecimalList.add(value2);
-		map.put("listDec",bigDecimalList);
+		map.put("listDec", bigDecimalList);
 
-		Set<BigDecimal> bigDecimalSet=new HashSet<>();
+		Set<BigDecimal> bigDecimalSet = new HashSet<>();
 		bigDecimalSet.add(value1);
 		bigDecimalSet.add(value2);
-		map.put("setDec",bigDecimalSet);
+		map.put("setDec", bigDecimalSet);
 
 		return "thymeleaf/demoObject";
 	}
 
 
 	@GetMapping("dealString")
-	public String delString(ModelMap map){
-		UserDO userDO =new UserDO("Luna",1);
-		userDO.setBirth(DateUtils.create("1999", "11", "07", "11", "45","59").getTime());
-		map.put("user",userDO);
+	public String delString(ModelMap map) {
+		UserDO userDO = new UserDO("Luna", 1);
+		userDO.setBirth(DateUtils.create("1999", "11", "07", "11", "45", "59").getTime());
+		map.put("user", userDO);
 		return "thymeleaf/dealString";
 	}
 
 	@GetMapping("commonSyntax")
-	public String commonSyntax(ModelMap map){
-		map.put("value","Luna");
+	public String commonSyntax(ModelMap map) {
+		map.put("value", "Luna");
 
 		List<UserDO> users = new ArrayList<>();
 		UserDO user1 = new UserDO("张三", 1);
@@ -97,7 +97,7 @@ public class WebController {
 	}
 
 	@GetMapping("fragment")
-	public String fragment(ModelMap map){
+	public String fragment(ModelMap map) {
 		List<UserDO> users = new ArrayList<>();
 		UserDO user1 = new UserDO("张三", 1);
 		UserDO user2 = new UserDO("李四", 2);
@@ -109,9 +109,9 @@ public class WebController {
 	}
 
 	@GetMapping("inlining")
-	public String inlining(ModelMap map){
+	public String inlining(ModelMap map) {
 		UserDO user1 = new UserDO("张三", 1);
-		map.put("user1",user1);
+		map.put("user1", user1);
 
 		List<UserDO> users = new ArrayList<>();
 		UserDO user2 = new UserDO("李四", 2);
@@ -126,5 +126,10 @@ public class WebController {
 		map.put("userMap", userMap);
 
 		return "thymeleaf/inlining";
+	}
+
+	@GetMapping("management")
+	public String management(ModelMap map) {
+		return "thymeleaf/management";
 	}
 }
