@@ -1,7 +1,7 @@
-package com.luna.web.service;
+package com.luna.web.user.service;
 
-import com.luna.web.dao.UserDAO;
-import com.luna.web.entity.UserDO;
+import com.luna.web.user.dao.UserDAO;
+import com.luna.web.user.entity.UserDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

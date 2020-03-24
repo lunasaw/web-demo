@@ -1,14 +1,11 @@
-package com.luna.web.dao;
+package com.luna.web.user.dao;
 
-import com.luna.web.entity.DepartmentDO;
-import com.luna.web.entity.UserDO;
-import org.apache.catalina.User;
+import com.luna.web.user.entity.DepartmentDO;
+import com.luna.web.user.entity.UserDO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.thymeleaf.util.DateUtils;
 
-import javax.annotation.Resource;
 import java.util.*;
 
 /**

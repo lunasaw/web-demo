@@ -1,17 +1,14 @@
-package com.luna.web.controller;
+package com.luna.web.user.controller;
 
-import com.luna.web.dao.DepartmentDAO;
-import com.luna.web.dao.UserDAO;
-import com.luna.web.entity.DepartmentDO;
-import com.luna.web.entity.UserDO;
-import org.apache.catalina.User;
+import com.luna.web.user.dao.DepartmentDAO;
+import com.luna.web.user.dao.UserDAO;
+import com.luna.web.user.entity.DepartmentDO;
+import com.luna.web.user.entity.UserDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -102,4 +99,5 @@ public class UserController {
 		userDAO.delete(id);
 		return "redirect:/users";
 	}
+
 }

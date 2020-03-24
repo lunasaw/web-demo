@@ -1,7 +1,6 @@
-package com.luna.web.dao;
+package com.luna.web.user.dao;
 
-import com.luna.web.entity.DepartmentDO;
-import org.springframework.stereotype.Component;
+import com.luna.web.user.entity.DepartmentDO;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;

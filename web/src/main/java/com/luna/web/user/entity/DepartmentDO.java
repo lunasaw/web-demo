@@ -1,4 +1,4 @@
-package com.luna.web.entity;
+package com.luna.web.user.entity;
 
 /**
  * @author Luna@win10

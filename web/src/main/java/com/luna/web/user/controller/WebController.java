@@ -1,7 +1,6 @@
-package com.luna.web.controller;
+package com.luna.web.user.controller;
 
-import com.luna.web.entity.UserDO;
-import org.apache.catalina.User;
+import com.luna.web.user.entity.UserDO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -72,7 +71,6 @@ public class WebController {
 
 		return "thymeleaf/demoObject";
 	}
-
 
 	@GetMapping("dealString")
 	public String delString(ModelMap map) {

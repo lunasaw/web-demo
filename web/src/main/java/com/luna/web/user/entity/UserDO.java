@@ -1,8 +1,7 @@
-package com.luna.web.entity;
+package com.luna.web.user.entity;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.xml.crypto.Data;
 import java.util.Date;
 
 /**
