@@ -1,7 +1,7 @@
 # 开发环境配置
 server:
   # 服务器的HTTP端口，默认为80
-  port: 8081
+  port: 80
   servlet:
     # 应用的访问路径
     context-path: /luna
@@ -81,7 +81,7 @@ server:
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://cdb-5w1wgodg.bj.tencentcdb.com:10067/luna
+    url: jdbc:mysql://cdb-5w1wgodg.bj.tencentcdb.com:10067/ruoyi
     username: root
     password: fwwb+111
 
