@@ -4,7 +4,7 @@ server:
   port: 8081
   servlet:
     # 应用的访问路径
-    context-path: /web
+    context-path: /luna
   tomcat:
     # 存放Tomcat的日志目录
     basedir: D:/Luna/web
