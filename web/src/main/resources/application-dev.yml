@@ -81,7 +81,7 @@ server:
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://cdb-5w1wgodg.bj.tencentcdb.com:10067/ruoyi
+    url: jdbc:mysql://cdb-5w1wgodg.bj.tencentcdb.com:10067/luna
     username: root
     password: fwwb+111
 

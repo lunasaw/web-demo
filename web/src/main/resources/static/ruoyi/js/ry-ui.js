@@ -315,6 +315,7 @@ var table = {
 					return $.common.nullToStr(value);
 				}
 			},
+
             // 搜索-默认第一个form
             search: function(formId, tableId, data) {
             	table.set(tableId);
@@ -332,6 +333,7 @@ var table = {
                     search.searchValue = params.search;
                     search.orderByColumn = params.sort;
                     search.isAsc = params.order;
+                    console.log(search);
     		        return search;
     		    }
     		    if($.common.isNotEmpty(tableId)){

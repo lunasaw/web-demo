@@ -31,16 +31,16 @@ public class TableController extends BaseController {
 
     private String          prefix = "page";
 
-    @GetMapping("/table")
+    @GetMapping("/operlogC")
     public String table() {
-        return prefix + "/table";
+        return prefix + "/operlogClient";
     }
 
     @PostMapping("/list")
     @ResponseBody
-    public TableDataInfo list(UserDO user) {
-        startPage();
-        List<UserDO> list = userDAO.getAll();
+    public TableDataInfo listByClient(OperLog operLog) {
+        // 客户端分页
+        List<OperLog> list = operLogService.selectOperLogList(operLog);
         return getDataTable(list);
     }
 
@@ -52,7 +52,7 @@ public class TableController extends BaseController {
         return getDataTable(list);
     }
 
-    @GetMapping("/operlog")
+    @GetMapping("/operlogS")
     public String operlog() {
         return prefix + "/operlog";
     }

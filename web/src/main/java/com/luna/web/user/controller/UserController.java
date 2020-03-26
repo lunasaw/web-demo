@@ -1,5 +1,8 @@
 package com.luna.web.user.controller;
 
+import com.luna.common.core.page.TableDataInfo;
+import com.luna.web.controller.BaseController;
+import com.luna.web.table.entity.OperLog;
 import com.luna.web.user.dao.DepartmentDAO;
 import com.luna.web.user.dao.UserDAO;
 import com.luna.web.user.entity.DepartmentDO;
@@ -16,7 +19,7 @@ import java.util.List;
  * @date 2020/3/21 19:33
  */
 @Controller
-public class UserController {
+public class UserController extends BaseController {
 
 	@Autowired
 	private UserDAO userDAO;
@@ -98,6 +101,14 @@ public class UserController {
 	public String deleteUser(@PathVariable("id") Integer id) {
 		userDAO.delete(id);
 		return "redirect:/users";
+	}
+
+	@PostMapping("user/list")
+	@ResponseBody
+	public TableDataInfo listByClient() {
+		// 客户端分页
+		List<UserDO> list = userDAO.getAll();
+		return getDataTable(list);
 	}
 
 }

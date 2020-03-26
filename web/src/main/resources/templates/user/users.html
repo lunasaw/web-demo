@@ -101,17 +101,13 @@
     });
 </script>
 <script th:inline="javascript">
-    var prefix = ctx + "demo/table";
-    prefix = ctx + "demo/user";
+    prefix = ctx + "user";
     $(function () {
         var options = {
             id: "bootstrap-table1",
             toolbar: "toolbar1",
             url: prefix + "/list",
-            showSearch: true,
-            showRefresh: true,
-            showToggle: true,
-            showColumns: true,
+            sidePagination: "client",
             columns: [{
                 checkbox: true
             },
