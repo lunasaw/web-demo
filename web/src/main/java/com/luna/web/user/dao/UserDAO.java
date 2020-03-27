@@ -53,12 +53,19 @@ public class UserDAO {
 		System.out.println("存入数据库");
 	}
 
+
 	public UserDO get(Integer id) {
 		return users.get(id);
 	}
 
 	public void delete(Integer id) {
 		users.remove(id);
+	}
+
+	public int update(UserDO userDO){
+		users.put(userDO.getId(),userDO);
+		System.out.println("service 进行数据处理  根据修改行数返回");
+		return 1;
 	}
 
 }

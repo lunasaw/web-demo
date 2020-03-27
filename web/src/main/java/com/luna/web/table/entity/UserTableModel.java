@@ -141,4 +141,19 @@ public class UserTableModel {
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
+
+	@Override
+	public String toString() {
+		return "UserTableModel{" +
+				"userId=" + userId +
+				", userCode='" + userCode + '\'' +
+				", userName='" + userName + '\'' +
+				", userSex='" + userSex + '\'' +
+				", userPhone='" + userPhone + '\'' +
+				", userEmail='" + userEmail + '\'' +
+				", userBalance=" + userBalance +
+				", status='" + status + '\'' +
+				", createTime=" + createTime +
+				'}';
+	}
 }

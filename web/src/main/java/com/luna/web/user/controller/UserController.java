@@ -2,7 +2,7 @@ package com.luna.web.user.controller;
 
 import com.luna.common.core.page.TableDataInfo;
 import com.luna.web.controller.BaseController;
-import com.luna.web.table.entity.OperLog;
+import com.luna.web.table.mapper.UserTableModelDAO;
 import com.luna.web.user.dao.DepartmentDAO;
 import com.luna.web.user.dao.UserDAO;
 import com.luna.web.user.entity.DepartmentDO;
@@ -103,7 +103,7 @@ public class UserController extends BaseController {
 		return "redirect:/users";
 	}
 
-	@PostMapping("user/list")
+	@PostMapping("/user/list")
 	@ResponseBody
 	public TableDataInfo listByClient() {
 		// 客户端分页
