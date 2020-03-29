@@ -2,7 +2,6 @@ package com.luna.web.user.controller;
 
 import com.luna.common.core.page.TableDataInfo;
 import com.luna.web.controller.BaseController;
-import com.luna.web.table.mapper.UserTableModelDAO;
 import com.luna.web.user.dao.DepartmentDAO;
 import com.luna.web.user.dao.UserDAO;
 import com.luna.web.user.entity.DepartmentDO;
@@ -19,6 +18,7 @@ import java.util.List;
  * @date 2020/3/21 19:33
  */
 @Controller
+@RequestMapping(path = "crud")
 public class UserController extends BaseController {
 
 	@Autowired
@@ -45,7 +45,7 @@ public class UserController extends BaseController {
 	 * @param map
 	 * @return
 	 */
-	@GetMapping("user")
+	@GetMapping("/user")
 	public String toAddPage(ModelMap map) {
 		List<DepartmentDO> departments = departmentDAO.getDepartmentDOs();
 		map.addAttribute("depts", departments);
@@ -59,11 +59,11 @@ public class UserController extends BaseController {
 	 * @return
 	 */
 	@PostMapping("/user")
-	public String addUser(UserDO userDO) {
+	public String  addUser(UserDO userDO) {
 		System.out.println("提交的用户信息" + userDO);
 		userDAO.insert(userDO);
 		//　TODO　添加完成后来到用户列表页面 redirect: 重定向地址  forward:转发地址
-		return "redirect:/users";
+		return "redirect:/crud/users?id=1";
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class UserController extends BaseController {
 	@PutMapping("/user")
 	public String updateUser(UserDO userDO) {
 		System.out.println("修改对象:" + userDO);
-		return "redirect:/users";
+		return "redirect:/crud/users";
 	}
 
 	/**
@@ -99,11 +99,12 @@ public class UserController extends BaseController {
 	 */
 	@DeleteMapping("/user/{id}")
 	public String deleteUser(@PathVariable("id") Integer id) {
+		System.out.println("调用删除方法"+id);
 		userDAO.delete(id);
-		return "redirect:/users";
+		return "redirect:/crud/users";
 	}
 
-	@PostMapping("/user/list")
+	@PostMapping("/list")
 	@ResponseBody
 	public TableDataInfo listByClient() {
 		// 客户端分页
