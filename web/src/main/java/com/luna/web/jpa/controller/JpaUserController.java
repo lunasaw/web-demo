@@ -16,6 +16,7 @@ import java.util.Optional;
  * @date 2020/4/4 19:14
  */
 @RestController
+@RequestMapping("jpa")
 public class JpaUserController {
 
 	@Autowired
