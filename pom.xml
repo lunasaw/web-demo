@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.luna</groupId>
-    <artifactId>Luna-Demo</artifactId>
+    <artifactId>luna-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
-    <name>Luna-Demo</name>
+    <name>luna-demo</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
@@ -174,8 +174,12 @@
             <!-- 定时任务-->
 
 
-            <!-- 代码生成-->
-
+            <!-- web测试-->
+            <dependency>
+                <groupId>com.luna</groupId>
+                <artifactId>web</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
 
             <!-- 核心模块-->
             <dependency>
@@ -205,7 +209,7 @@
 
 
     <build>
-        <finalName>Luna-Demo</finalName>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

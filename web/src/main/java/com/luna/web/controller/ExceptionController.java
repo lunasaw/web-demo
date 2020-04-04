@@ -25,7 +25,7 @@ public class ExceptionController {
 	@GetMapping("/demo1")
 	@ResponseBody
 	public Object demo1(){
-		int i = 1 / 0;
+//		int i = 1 / 0;
 		return new Date();
 	}
 
