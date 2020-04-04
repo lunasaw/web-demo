@@ -10,25 +10,17 @@ import javax.sql.DataSource;
 
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
-import com.luna.common.enums.DataSourceType;
-import com.luna.common.utils.spring.SpringUtils;
-import com.luna.framework.config.properties.DruidProperties;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-
 import com.alibaba.druid.pool.DruidDataSource;
-import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
-import com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties;
-import com.alibaba.druid.util.Utils;
 
 /**
  * druid 配置多数据源
- * 
+ *
  * @author luna
  */
 @Configuration

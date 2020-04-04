@@ -7,7 +7,6 @@
     <groupId>com.luna</groupId>
     <artifactId>luna-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
     <packaging>pom</packaging>
 
     <name>luna-demo</name>
@@ -28,31 +27,18 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>2.1.1</version>
-            </dependency>
-
-            <!-- SpringBoot的依赖配置-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.1.1.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
 
             <!--阿里数据库连接池 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
-                <version>1.1.14</version>
+                <version>1.1.10</version>
             </dependency>
 
             <!--验证码 -->
@@ -170,10 +156,6 @@
                 <version>1.2.60</version>
             </dependency>
 
-
-            <!-- 定时任务-->
-
-
             <!-- web测试-->
             <dependency>
                 <groupId>com.luna</groupId>
@@ -187,8 +169,6 @@
                 <artifactId>framework</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
-
-            <!-- 系统模块-->
 
 
             <!-- 通用工具-->
@@ -207,20 +187,44 @@
         </dependencies>
     </dependencyManagement>
 
-
     <build>
-        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.1</version>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>

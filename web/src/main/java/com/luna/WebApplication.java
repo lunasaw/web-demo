@@ -1,12 +1,15 @@
-package com.luna.web;
+package com.luna;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 
-@ComponentScan(value = "com.luna.framework.config")
-@SpringBootApplication()
+/**
+ * @SpringBootApplication(scanBasePackages = "com.luna")
+ *
+ * SpringBootApplication 扫描子包和同级包
+ */
+@SpringBootApplication
 public class WebApplication {
 
     public static void main(String[] args) {

@@ -33,7 +33,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://cdb-5w1wgodg.bj.tencentcdb.com:10067/luna
+    url: jdbc:mysql://cdb-5w1wgodg.bj.tencentcdb.com:10067/luna-demo
     username: root
     password: fwwb+111
     # 初始连接数
@@ -49,7 +49,7 @@ spring:
     # 配置一个连接在池中最小生存的时间，单位是毫秒
     minEvictableIdleTimeMillis: 300000
     # 配置一个连接在池中最大生存的时间，单位是毫秒
-    maxEvictableIdleTimeMillis: 900000
+    maxEvictableIdleTimeMillis: 2000000
     # 配置检测连接是否有效
     validationQuery: SELECT 1 FROM DUAL
     testWhileIdle: true
@@ -65,8 +65,10 @@ spring:
       # 控制台管理用户名和密码
       login-username: root
       login-password: admin
-    filter:
-      stat:
-        enabled: true
 
-
+  jpa:
+    hibernate:
+      # 更新或者创建数据结构表
+      ddl-auto: update
+     # 控制台显示sql
+    show-sql: true
