@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @ControllerAdvice
 public class AdviceHanlerException {
-	private static final Logger log = LoggerFactory.getLogger(DruidConfig.class);
+	private static final Logger log = LoggerFactory.getLogger(AdviceHanlerException.class);
 
 	@ExceptionHandler(value = RuntimeException.class)
 	@ResponseBody

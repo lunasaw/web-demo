@@ -1,7 +1,10 @@
 package com.luna.web.user.service;
 
+import com.luna.web.jpa.controller.JpaUserController;
 import com.luna.web.user.dao.UserDAO;
 import com.luna.web.user.entity.UserDO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +17,9 @@ import java.util.List;
 @Service("dict")
 public class UserService {
 
+	private static final  Logger log = LoggerFactory.getLogger(UserService.class);
+
+
 	@Autowired
 	private UserDAO userDAO;
 
@@ -22,6 +28,7 @@ public class UserService {
 	}
 
 	public String getMessage() {
+		log.info("html方式调用后台");
 		return "html方式调用后台";
 	}
 

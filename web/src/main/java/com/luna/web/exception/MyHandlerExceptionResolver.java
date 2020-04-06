@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 @Component
 public class MyHandlerExceptionResolver implements HandlerExceptionResolver {
 
-	private static final Logger log = LoggerFactory.getLogger(DruidConfig.class);
+	private static final Logger log = LoggerFactory.getLogger(MyHandlerExceptionResolver.class);
 
     @Override
     public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler,

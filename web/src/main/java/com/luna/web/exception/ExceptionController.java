@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @RequestMapping("detail")
 public class ExceptionController {
-    private static final Logger log = LoggerFactory.getLogger(DruidConfig.class);
+    private static final Logger log = LoggerFactory.getLogger(ExceptionController.class);
 
     @GetMapping("/demo1")
     @ResponseBody

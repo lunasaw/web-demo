@@ -21,7 +21,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("jpa")
 public class JpaUserController {
-	private static final Logger log = LoggerFactory.getLogger(DruidConfig.class);
+	private  Logger log = LoggerFactory.getLogger(JpaUserController.class);
 
 
 	@Autowired
