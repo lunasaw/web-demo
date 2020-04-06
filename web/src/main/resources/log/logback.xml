@@ -8,7 +8,7 @@
     <!-- ConsoleAppender：把日志输出到控制台 -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d %X{traceId} %p (%file:%line\) - %m %X{uri}%n</pattern>
+            <pattern>%d %X{traceId} %p (%file:%method:%line\) - %m %X{uri}%n</pattern>
             <charset>UTF-8</charset>
         </encoder>
     </appender>

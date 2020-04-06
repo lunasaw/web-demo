@@ -11,6 +11,8 @@ import javax.sql.DataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -26,10 +28,13 @@ import com.alibaba.druid.pool.DruidDataSource;
 @Configuration
 public class DruidConfig {
 
-    @Bean
+	private static final Logger log = LoggerFactory.getLogger(DruidConfig.class);
+
+
+	@Bean
     @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource druidDataSource() {
-        System.out.println("启动数据源");
+		log.info("启动数据源");
         return new DruidDataSource();
     }
 
@@ -39,7 +44,7 @@ public class DruidConfig {
         Map<String, String> initParams = new HashMap<>();
         initParams.put("loginUsername", "root");
         initParams.put("loginPassword", "admin");
-        System.out.println("配置用户");
+	    log.info("配置用户");
         bean.setInitParameters(initParams);
         return bean;
     }
