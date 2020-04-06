@@ -21,17 +21,17 @@ import java.util.Optional;
 @RestController
 @RequestMapping("jpa")
 public class JpaUserController {
-	private static final Logger log = LoggerFactory.getLogger(JpaUserController.class);
+	private static final Logger log = LoggerFactory.getLogger(DruidConfig.class);
 
 
 	@Autowired
 	JpaUserRepository jpaUserRepository;
 
 	@GetMapping("/user/{id}")
-	public String getUser(@PathVariable("id")Integer id){
+	public Optional<JpaUserDO> getUser(@PathVariable("id")Integer id){
 		log.info("jpa进入方法");
 		Optional<JpaUserDO> byId = jpaUserRepository.findById(id);
-		return byId.toString();
+		return byId;
 	}
 
 	@GetMapping("/user")

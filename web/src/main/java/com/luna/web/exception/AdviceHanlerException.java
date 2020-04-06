@@ -6,10 +6,7 @@ import com.luna.framework.config.DruidConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,12 +17,12 @@ import javax.servlet.http.HttpServletRequest;
  */
 @ControllerAdvice
 public class AdviceHanlerException {
-	private static final Logger log = LoggerFactory.getLogger(AdviceHanlerException.class);
+	private static final Logger log = LoggerFactory.getLogger(DruidConfig.class);
 
 	@ExceptionHandler(value = RuntimeException.class)
 	@ResponseBody
 	public Object fix(HttpServletRequest request,Exception ex){
-		System.out.println("优先第二 do This @ControllerAdvice+@ExceptionHandler");
+		log.info("优先第二 do This @ControllerAdvice+@ExceptionHandler");
 		if (ServletUtils.isAjaxRequest(request)){
 			return AjaxResult.error(ex.getMessage());
 		}
