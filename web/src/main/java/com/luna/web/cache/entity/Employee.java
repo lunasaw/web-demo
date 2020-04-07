@@ -19,7 +19,7 @@ public class Employee implements Serializable {
     
     private String gender;
     
-    private Integer did;
+    private Integer dId;
 
 
     public Integer getId() {
@@ -55,11 +55,21 @@ public class Employee implements Serializable {
     }
 
     public Integer getDid() {
-        return did;
+        return dId;
     }
 
-    public void setDid(Integer did) {
-        this.did = did;
+    public void setDid(Integer dId) {
+        this.dId = dId;
     }
 
+	@Override
+	public String toString() {
+		return "Employee{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", email='" + email + '\'' +
+				", gender='" + gender + '\'' +
+				", dId=" + dId +
+				'}';
+	}
 }

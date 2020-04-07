@@ -20,6 +20,7 @@ luna:
 logging:
   config: classpath:log/logback.xml
 
+
 # 用户配置
 user:
   password:
