@@ -97,7 +97,6 @@
             <artifactId>jna-platform</artifactId>
         </dependency>
 
-
     </dependencies>
 
 </project>

@@ -1,5 +1,8 @@
 # 项目相关配置
 luna:
+  hello:
+    prefix: luna
+    suffix: hello
   # 名称
   name: Luna
   # 版本
@@ -71,5 +74,6 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
+
 
 

@@ -97,6 +97,14 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.1.1</version>
         </dependency>
+
+        <!--引入自定义starter-->
+        <dependency>
+            <groupId>com.luna</groupId>
+            <artifactId>luna-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
     <build>
