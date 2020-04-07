@@ -31,8 +31,8 @@
 			<div class="panel-body">
 				1. 非空处理 isEmpty <p th:text="'[[${#strings.isEmpty(user)}]]'"></p>
 				<p class="text-left">isEmpty 方法: [[${#strings.isEmpty(user)}]]</p>
-				2. 默认值处理 defaultString<p th:text="'[[${#strings.defaultString(user.department, '+'\'无部门\''+')}]]'"></p>
-				<p class="text-left">defaultString 方法: [[${#strings.defaultString(user.department, '无部门')}]]</p>
+				2. 默认值处理 defaultString<p th:text="'[[${#strings.defaultString(user.departmentDO, '+'\'无部门\''+')}]]'"></p>
+				<p class="text-left">defaultString 方法: [[${#strings.defaultString(user.departmentDO, '无部门')}]]</p>
 			</div>
 		</div>
 	</div>

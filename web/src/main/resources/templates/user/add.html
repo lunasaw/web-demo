@@ -55,7 +55,7 @@
 								</div>
 								<div class="form-group">
 									<label class="font-noraml">部门:</label>
-									<select class="form-control" th:name="department.id">
+									<select class="form-control" th:name="departmentDO.id">
 										<option th:each="dept:${depts}" th:text="${dept.name}"
 										        th:value="${dept.id}"></option>
 									</select>

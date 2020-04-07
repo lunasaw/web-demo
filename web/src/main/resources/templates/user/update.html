@@ -60,8 +60,8 @@
 
 								<div class="form-group">
 									<label class="font-noraml">部门:</label>
-									<select class="form-control" th:name="department.id">
-										<option th:selected="${dept.id == user.department.id}" th:each="dept:${depts}"
+									<select class="form-control" th:name="departmentDO.id">
+										<option th:selected="${dept.id == user.departmentDO.id}" th:each="dept:${depts}"
 										        th:text="${dept.name}"
 										        th:value="${dept.id}"></option>
 									</select>

@@ -19,7 +19,7 @@
 						<th th:utext="'[[${user.name}]]行内样式name'"></th>
 						<th>th:text="${user.gender}==0?'女':'男'"gender</th>
 						<th>birthday</th>
-						<th>department</th>
+						<th>departmentDO</th>
 						<th>操作</th>
 					</tr>
 					</thead>
@@ -29,7 +29,7 @@
 						<td>[[${user.name}]]</td>
 						<td th:text="${user.gender}==0?'女':'男'"></td>
 						<td th:text="${#dates.format(user.birth,'yyyy-MM-dd')}"></td>
-						<td th:text="${user.department.name}"></td>
+						<td th:text="${user.departmentDO.name}"></td>
 						<td>
 							<a th:href="@{/crud/user/}+${user.id}" class="bottom btn btn-success">编辑</a>
 							<button th:attr="del_uri=@{/crud/user/}+${user.id}" type="submit"
@@ -149,7 +149,7 @@
                     title: '用户生日'
                 },
                 {
-                    field: 'department.name',
+                    field: 'departmentDO.name',
                     title: '用户部门'
                 },
                 // {
