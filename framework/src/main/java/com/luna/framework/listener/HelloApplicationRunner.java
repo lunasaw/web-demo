@@ -22,7 +22,7 @@ public class HelloApplicationRunner implements ApplicationRunner {
 		log.info("参数传入");
 		List<ApplicationArguments> applicationArguments = Arrays.asList(args);
 		for (int i = 0; i < applicationArguments.size(); i++) {
-			log.info(applicationArguments.get(i).toString());
+			log.info(applicationArguments.get(i).getOptionNames().toString());
 		}
 	}
 }

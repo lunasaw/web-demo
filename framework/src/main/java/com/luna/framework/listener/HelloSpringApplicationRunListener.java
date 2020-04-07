@@ -20,7 +20,7 @@ public class HelloSpringApplicationRunListener implements SpringApplicationRunLi
 
     @Override
     public void starting() {
-        log.info("SpringApplicationRunListener...starting...");
+        log.info("starter 启动 SpringApplicationRunListener...starting...");
     }
 
     @Override
@@ -42,12 +42,12 @@ public class HelloSpringApplicationRunListener implements SpringApplicationRunLi
 
     @Override
     public void started(ConfigurableApplicationContext context) {
-        log.info("SpringApplicationRunListener...started...");
+        log.info("starter 启动 SpringApplicationRunListener...started...");
     }
 
     @Override
     public void running(ConfigurableApplicationContext context) {
-        log.info("running");
+        log.info("running 启动完成 ");
     }
 
     @Override

@@ -15,6 +15,6 @@ public class HelloApplicationContextInitializer implements ApplicationContextIni
 
 	@Override
 	public void initialize(ConfigurableApplicationContext applicationContext) {
-		log.info("ApplicationContextInitializer...initializer..." + applicationContext);
+		log.info("Spring 监听器 ApplicationContextInitializer...initializer..." + applicationContext.toString());
 	}
 }
