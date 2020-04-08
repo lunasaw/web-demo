@@ -1,24 +1,87 @@
-2020-04-07 18:43:08,373  INFO (ExceptionController.java:39) - do This @Controller+@ExceptionHandler优先级最高 
-2020-04-07 21:50:50,387  INFO (EmployeeServiceImpl.java:36) - 1查询一次:com.luna.web.cache.entity.Employee@2c8be5dd 
-2020-04-07 21:50:55,319  INFO (EmployeeServiceImpl.java:44) - 1查询一次:com.luna.web.cache.entity.Employee@642fcd13 
-2020-04-07 21:52:03,853  INFO (EmployeeServiceImpl.java:44) - 1查询一次:com.luna.web.cache.entity.Employee@6a7f33b1 
-2020-04-07 21:55:14,559  INFO (EmployeeServiceImpl.java:48) - 2查询一次:Employee{id=2, name='李四', email='231232@qq.com', gender='0', dId=1} 
-2020-04-07 21:56:43,836  INFO (EmployeeServiceImpl.java:48) - 查询一次:Employee{id=2, name='李四', email='231232@qq.com', gender='0', dId=1} 
-2020-04-07 21:56:47,752  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-07 21:56:54,876  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-07 21:58:15,038  INFO (EmployeeServiceImpl.java:50) - 查询一次:Employee{id=2, name='李四', email='231232@qq.com', gender='0', dId=1} 
-2020-04-07 21:58:25,911  INFO (EmployeeServiceImpl.java:50) - 查询一次:Employee{id=1, name='张三', email='1345354@qq.com', gender='1', dId=1} 
-2020-04-07 23:10:47,157  INFO (EmployeeServiceImpl.java:78) - 查询一次:Employee{id=1, name='张三', email='1345354@qq.com', gender='1', dId=1} 
-2020-04-07 23:12:57,810  INFO (EmployeeServiceImpl.java:78) - 查询一次:Employee{id=1, name='张三', email='1345354@qq.com', gender='1', dId=1} 
-2020-04-07 23:13:01,060  INFO (EmployeeServiceImpl.java:78) - 查询一次:Employee{id=1, name='张三', email='1345354@qq.com', gender='1', dId=1} 
-2020-04-07 23:13:04,382  INFO (EmployeeServiceImpl.java:78) - 查询一次:Employee{id=1, name='张三', email='1345354@qq.com', gender='1', dId=1} 
-2020-04-07 23:13:09,824  INFO (EmployeeServiceImpl.java:78) - 查询一次:Employee{id=2, name='李四', email='231232@qq.com', gender='0', dId=1} 
-2020-04-07 23:17:00,385  INFO (EmployeeServiceImpl.java:79) - 查询一次:Employee{id=1, name='张三', email='1345354@qq.com', gender='1', dId=1} 
-2020-04-07 23:17:01,826  INFO (EmployeeServiceImpl.java:79) - 查询一次:Employee{id=1, name='张三', email='1345354@qq.com', gender='1', dId=1} 
-2020-04-07 23:17:06,900  INFO (EmployeeServiceImpl.java:79) - 查询一次:Employee{id=1, name='张三', email='1345354@qq.com', gender='1', dId=1} 
-2020-04-07 23:17:10,040  INFO (EmployeeServiceImpl.java:79) - 查询一次:Employee{id=1, name='张三', email='1345354@qq.com', gender='1', dId=1} 
-2020-04-07 23:17:12,105  INFO (EmployeeServiceImpl.java:79) - 查询一次:Employee{id=2, name='李四', email='231232@qq.com', gender='0', dId=1} 
-2020-04-07 23:17:12,118  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-07 23:18:00,813  INFO (EmployeeServiceImpl.java:79) - 查询一次:Employee{id=2, name='李四', email='231232@qq.com', gender='0', dId=1} 
-2020-04-07 23:18:05,311  INFO (EmployeeServiceImpl.java:79) - 查询一次:Employee{id=2, name='李四', email='231232@qq.com', gender='0', dId=1} 
-2020-04-07 23:19:48,200  INFO (EmployeeServiceImpl.java:79) - 查询一次:Employee{id=1, name='张三', email='1345354@qq.com', gender='1', dId=1} 
+2020-04-08 22:18:20,463  INFO (EmployeeServiceImpl.java:84) - 查询一次:Employee{id=1, name='张三', email='1345354@qq.com', gender='1', dId=1} 
+2020-04-08 22:25:12,500  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:25:58,517  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:27:00,531  INFO (EmployeeServiceImpl.java:84) - 查询一次:Employee{id=1, name='张三', email='1345354@qq.com', gender='1', dId=1} 
+2020-04-08 22:29:28,476  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:30:05,527  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:32:01,790  INFO (EmployeeController.java:83) - Employee{id=null, name='null', email='null', gender='null', dId=null} 
+2020-04-08 22:32:02,032  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:35:18,011  INFO (EmployeeController.java:83) - Employee{id=1, name='王五', email='null', gender='null', dId=null} 
+2020-04-08 22:35:18,286  INFO (EmployeeServiceImpl.java:134) - 更新一次,修改行数:Employee{id=1, name='王五', email='null', gender='null', dId=null} 
+2020-04-08 22:35:18,367  INFO (EmployeeServiceImpl.java:84) - 查询一次:Employee{id=1, name='王五', email='1345354@qq.com', gender='1', dId=1} 
+2020-04-08 22:42:39,919  INFO (EmployeeServiceImpl.java:149) - 删除一次:1 
+2020-04-08 22:42:55,847  INFO (EmployeeServiceImpl.java:149) - 删除一次:1 
+2020-04-08 22:43:08,828  INFO (EmployeeServiceImpl.java:149) - 删除一次:3 
+2020-04-08 22:50:18,477  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:50:39,888  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:51:15,030  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:51:43,883  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:52:11,806  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:52:37,243  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:52:48,055  INFO (EmployeeController.java:70) - Employee{id=1, name='张三', email='123123@qq.com', gender='1', dId=null} 
+2020-04-08 22:52:48,211  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:53:11,492  INFO (EmployeeController.java:70) - Employee{id=1, name='张三', email='123123@qq.com', gender='1', dId=null} 
+2020-04-08 22:53:11,640  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:53:57,489  INFO (EmployeeController.java:70) - Employee{id=1, name='张三', email='123123@qq.com', gender='1', dId=1} 
+2020-04-08 22:53:57,699  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:54:17,591  INFO (EmployeeController.java:70) - Employee{id=1, name='张三', email='123123@qq.com', gender='1', dId=null} 
+2020-04-08 22:54:17,739  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:54:44,975  INFO (EmployeeController.java:70) - Employee{id=1, name='张三', email='123123@qq.com', gender='1', dId=1} 
+2020-04-08 22:54:45,126  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:54:49,486  INFO (EmployeeController.java:70) - Employee{id=1, name='张三', email='123123@qq.com', gender='1', dId=1} 
+2020-04-08 22:54:49,634  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:56:30,889  INFO (EmployeeController.java:70) - Employee{id=1, name='张三', email='123123@qq.com', gender='1', dId=1} 
+2020-04-08 22:56:31,121  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 22:59:33,765  INFO (EmployeeController.java:85) - Employee{id=2, name='张三', email='123123@qq.com', gender='1', dId=1} 
+2020-04-08 23:00:17,896  INFO (EmployeeServiceImpl.java:135) - 更新一次,修改行数:Employee{id=2, name='张三', email='123123@qq.com', gender='1', dId=1} 
+2020-04-08 23:00:17,981  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=2, name='张三', email='123123@qq.com', gender='1', dId=1} 
+2020-04-08 23:00:30,025  INFO (EmployeeController.java:85) - Employee{id=2, name='张三', email='123123@qq.com', gender='1', dId=null} 
+2020-04-08 23:00:30,182  INFO (EmployeeServiceImpl.java:135) - 更新一次,修改行数:Employee{id=2, name='张三', email='123123@qq.com', gender='1', dId=null} 
+2020-04-08 23:00:30,270  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=2, name='张三', email='123123@qq.com', gender='1', dId=1} 
+2020-04-08 23:01:02,200  INFO (EmployeeController.java:85) - Employee{id=2, name='张三', email='123123@qq.com', gender='1', dId=2} 
+2020-04-08 23:01:02,368  INFO (EmployeeServiceImpl.java:135) - 更新一次,修改行数:Employee{id=2, name='张三', email='123123@qq.com', gender='1', dId=2} 
+2020-04-08 23:01:02,448  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=2, name='张三', email='123123@qq.com', gender='1', dId=2} 
+2020-04-08 23:02:08,257  INFO (EmployeeController.java:70) - Employee{id=1, name='张三', email='123123@qq.com', gender='1', dId=2} 
+2020-04-08 23:02:08,513  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 23:03:20,102  INFO (EmployeeController.java:70) - Employee{id=1, name='张三', email='123123@qq.com', gender='1', dId=2} 
+2020-04-08 23:03:29,359  INFO (EmployeeController.java:70) - Employee{id=1, name='张三', email='123123@qq.com', gender='1', dId=null} 
+2020-04-08 23:03:29,521  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 23:04:23,293  INFO (EmployeeController.java:70) - Employee{id=1, name='张三', email='123123@qq.com', gender='1', dId=null} 
+2020-04-08 23:04:23,453  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 23:06:29,946  INFO (EmployeeController.java:70) - Employee{id=1, name='null', email='123123@qq.com', gender='1', dId=null} 
+2020-04-08 23:06:30,189  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 23:06:44,178  INFO (EmployeeController.java:70) - Employee{id=1, name='张三', email='123123@qq.com', gender='1', dId=2} 
+2020-04-08 23:08:15,636  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
+2020-04-08 23:09:30,931  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
+2020-04-08 23:09:35,490  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
+2020-04-08 23:10:17,786  INFO (EmployeeController.java:85) - Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=null} 
+2020-04-08 23:10:18,214  INFO (EmployeeServiceImpl.java:135) - 更新一次,修改行数:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=null} 
+2020-04-08 23:10:18,297  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
+2020-04-08 23:10:35,603  INFO (EmployeeController.java:85) - Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=null} 
+2020-04-08 23:10:35,769  INFO (EmployeeServiceImpl.java:135) - 更新一次,修改行数:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=null} 
+2020-04-08 23:10:35,854  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
+2020-04-08 23:13:28,647  INFO (EmployeeController.java:85) - Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=null} 
+2020-04-08 23:13:28,907  INFO (EmployeeServiceImpl.java:135) - 更新一次,修改行数:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=null} 
+2020-04-08 23:13:28,997  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
+2020-04-08 23:13:45,598  INFO (EmployeeController.java:85) - Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=null} 
+2020-04-08 23:13:45,764  INFO (EmployeeServiceImpl.java:135) - 更新一次,修改行数:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=null} 
+2020-04-08 23:13:45,847  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
+2020-04-08 23:18:18,673  INFO (EmployeeController.java:85) - Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=1} 
+2020-04-08 23:18:18,704  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 23:19:59,663  INFO (EmployeeController.java:85) - Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=1} 
+2020-04-08 23:19:59,739  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 23:22:57,783  INFO (EmployeeController.java:85) - Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=1} 
+2020-04-08 23:22:57,789  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-08 23:24:45,099  INFO (EmployeeController.java:85) - Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=1} 
+2020-04-08 23:24:45,392  INFO (EmployeeServiceImpl.java:135) - 更新一次,修改行数:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=1} 
+2020-04-08 23:24:45,497  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=1} 
+2020-04-08 23:25:19,684  INFO (EmployeeServiceImpl.java:149) - 删除一次:1 
+2020-04-08 23:25:56,573  INFO (EmployeeController.java:70) - Employee{id=1, name='李四', email='123123@qq.com', gender='1', departmentId=1} 
+2020-04-08 23:26:51,089  INFO (EmployeeServiceImpl.java:149) - 删除一次:5 
+2020-04-08 23:27:22,437  INFO (EmployeeController.java:70) - Employee{id=null, name='李四', email='123123@qq.com', gender='1', departmentId=1} 
+2020-04-08 23:28:06,292  INFO (EmployeeController.java:85) - Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
+2020-04-08 23:28:06,446  INFO (EmployeeServiceImpl.java:135) - 更新一次,修改行数:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
+2020-04-08 23:28:06,522  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
+2020-04-08 23:30:22,144  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
+2020-04-08 23:30:26,753  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=3, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
+2020-04-08 23:30:37,023  INFO (EmployeeServiceImpl.java:149) - 删除一次:3 

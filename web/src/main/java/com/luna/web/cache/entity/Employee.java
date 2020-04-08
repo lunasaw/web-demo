@@ -1,5 +1,7 @@
 package com.luna.web.cache.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.io.Serializable;
 
 /**
@@ -19,48 +21,52 @@ public class Employee implements Serializable {
     
     private String gender;
     
-    private Integer dId;
+    private Integer departmentId;
+
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 
-    public Integer getId() {
-        return id;
-    }
+	public String getGender() {
+		return gender;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	@JsonProperty("departmentId")
+	public Integer getDepartmentId() {
+		return departmentId;
+	}
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public Integer getDid() {
-        return dId;
-    }
-
-    public void setDid(Integer dId) {
-        this.dId = dId;
-    }
+	public void setDepartmentId(Integer departmentId) {
+		this.departmentId = departmentId;
+	}
 
 	@Override
 	public String toString() {
@@ -69,7 +75,7 @@ public class Employee implements Serializable {
 				", name='" + name + '\'' +
 				", email='" + email + '\'' +
 				", gender='" + gender + '\'' +
-				", dId=" + dId +
+				", departmentId=" + departmentId +
 				'}';
 	}
 }

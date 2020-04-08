@@ -5,6 +5,8 @@ import com.luna.web.cache.mapper.EmployeeMapper;
 import com.luna.web.cache.service.EmployeeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
@@ -65,7 +67,7 @@ public class EmployeeServiceImpl implements EmployeeService {
      *  2. key 使用keyGenerator 生成  默认是 SimpleKeyGenerator
      */
     @Override
-    @Cacheable(cacheNames = {"emp"}, keyGenerator = "KeyGenerator", condition = "#a0>1", unless = "#a0==2")
+    @Cacheable(cacheNames = {"emp"})
     /**
      * TODO  cacheNames 与value 一值 接收一个数组 可以指定多个缓存  指定方法返回值所放入那个缓存中
      * TODO key 键 默认是参数名
@@ -83,8 +85,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 	    log.info("查询一次:" + byPrimaryKey);
 	    return byPrimaryKey;
     }
-    
-    /**
+
+
+	/**
      * 通过Employee对象查询集合
      *
      * @param employee 实例对象
@@ -107,26 +110,43 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employee;
     }
 
+
     /**
+     * @cachePut 既调用方法又更新缓存
+     * 运行时机:
+     *  1. 调用目标方法
+     *  2. 将目标方法的结果缓存
+     * 测试:
+     *  1. 查询一个员工 结果放入缓存
+     *      key =id
+     *  2. 更新员工
+     *      使用 #result.id == #employee.id 但 Cacheable 不能使用 因为后者在查询之前就会调用key
+     *      将方法的返回值放入缓存中 key不一致 值为返回的对象
+     *      TODO 故缓存指定不一致 不会更新缓存
      * 修改数据
      *
      * @param employee 实例对象
      * @return 实例对象
      */
     @Override
+    @CachePut(value = "emp", key = "#result.id")
     public Employee update(Employee employee) {
-        this.employeeMapper.updateByPrimaryKey(employee);
-        return this.getById(employee.getId());
+    	employeeMapper.updateByPrimaryKey(employee);
+	    log.info("更新一次,修改行数:"+employee);
+	    return this.getById(employee.getId());
     }
 
     /**
      * 通过主键删除数据
-     *
+     * CacheEvict 缓存清楚
+     *  1. 可通过key 删除指定key的缓存
      * @param id 主键
      * @return 是否成功
      */
     @Override
+    @CacheEvict(value = "emp",key = "#id")
     public boolean deleteById(Integer id) {
+    	log.info("删除一次:"+id);
         return this.employeeMapper.deleteByPrimaryKey(id) > 0;
     }
 }

@@ -7,7 +7,7 @@
         <result property="name" column="name" jdbcType="VARCHAR"/>
         <result property="email" column="email" jdbcType="VARCHAR"/>
         <result property="gender" column="gender" jdbcType="VARCHAR"/>
-        <result property="dId" column="did" jdbcType="INTEGER"/>
+        <result property="departmentId" column="did" jdbcType="INTEGER"/>
     </resultMap>
 
     <!--查询单个-->
@@ -36,8 +36,8 @@
             <if test="gender != null and gender != ''">
                 and gender = #{gender}
             </if>
-            <if test="did != null">
-                and did = #{dId}
+            <if test="departmentId != null">
+                and did = #{departmentId}
             </if>
         </where>
     </select>
@@ -55,7 +55,7 @@
             <if test="gender != null and gender != ''">
                 gender,
             </if>
-            <if test="did != null">
+            <if test="departmentId != null">
                 did            </if>
         )
         values (
@@ -68,8 +68,8 @@
             <if test="gender != null and gender != ''">
             #{gender},
             </if>
-            <if test="did != null">
-            #{dId}            </if>
+            <if test="departmentId != null">
+            #{departmentId}            </if>
         )
     </insert>
 
@@ -86,8 +86,8 @@
             <if test="gender != null and gender != ''">
                 gender = #{gender} ,
             </if>
-            <if test="did != null">
-                did = #{dId}             </if>
+            <if test="departmentId != null">
+                did = #{departmentId}             </if>
         </set>
         where id = #{id}
     </update>
