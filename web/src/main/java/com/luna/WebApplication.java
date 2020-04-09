@@ -12,6 +12,9 @@ import org.springframework.cache.annotation.EnableCaching;
  *  1. 开启注解缓存 EnableCaching
  *  2. 注解缓存方法
  *  TODO 实际开发大都使用缓存中间件 redis 等..
+ *      1. 引入starter
+ *      2. 配置主机地址
+ *      3. 测试缓存
  */
 @EnableCaching
 @SpringBootApplication

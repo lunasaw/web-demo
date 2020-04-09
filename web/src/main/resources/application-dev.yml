@@ -72,3 +72,10 @@ spring:
       ddl-auto: update
      # 控制台显示sql
     show-sql: true
+
+  redis:
+    host: iszychen.club
+    port: 6379
+
+
+

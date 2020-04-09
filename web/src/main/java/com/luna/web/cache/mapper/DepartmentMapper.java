@@ -2,8 +2,9 @@ package com.luna.web.cache.mapper;
 
 import com.luna.web.cache.entity.Department;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
+
 
 /**
  * (Department)表数据库访问层

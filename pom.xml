@@ -42,6 +42,13 @@
                 <version>1.1.10</version>
             </dependency>
 
+            <!--redis模块 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>2.1.1.RELEASE</version>
+            </dependency>
+
             <!--验证码 -->
             <dependency>
                 <groupId>com.github.penggle</groupId>
@@ -184,6 +191,12 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>8.0.19</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.1.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

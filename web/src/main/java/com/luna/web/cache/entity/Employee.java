@@ -1,8 +1,8 @@
 package com.luna.web.cache.entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * (Employee)实体类

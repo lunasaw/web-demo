@@ -3,7 +3,6 @@ package com.luna.web.cache.controller;
 import com.luna.common.core.domain.AjaxResult;
 import com.luna.web.cache.entity.Employee;
 import com.luna.web.cache.service.EmployeeService;
-import com.luna.web.cache.service.impl.EmployeeServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
