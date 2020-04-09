@@ -6,6 +6,8 @@ import com.luna.web.cache.service.DepartmentService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.CacheManager;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +27,6 @@ public class DepartmentController {
 	 */
 	@Resource
 	private DepartmentService departmentService;
-
 	/**
 	 * Select list r.
 	 *

@@ -50,3 +50,12 @@
 2020-04-09 16:48:05,534  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
 2020-04-09 16:48:10,303  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
 2020-04-09 16:48:12,276  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
+2020-04-09 16:52:45,030  INFO (DepartmentServiceImpl.java:37) - 部门查询一次: 
+2020-04-09 16:53:19,565  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
+2020-04-09 16:53:25,718  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=6, name='李四', email='123123@qq.com', gender='1', departmentId=1} 
+2020-04-09 17:18:13,431  INFO (DepartmentServiceImpl.java:42) - 部门查询一次: 
+2020-04-09 17:36:12,720  INFO (DepartmentServiceImpl.java:42) - 部门查询一次: 
+2020-04-09 17:36:44,386  INFO (DepartmentServiceImpl.java:42) - 部门查询一次:2 
+2020-04-09 17:36:44,900  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-09 17:37:21,854  INFO (DepartmentServiceImpl.java:42) - 部门查询一次:2 
+2020-04-09 17:37:48,470  INFO (DepartmentServiceImpl.java:42) - 部门查询一次:2 

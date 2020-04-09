@@ -3,6 +3,12 @@ package com.luna.web.cache.service.impl;
 import com.luna.web.cache.entity.Department;
 import com.luna.web.cache.mapper.DepartmentMapper;
 import com.luna.web.cache.service.DepartmentService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.Cache;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -16,9 +22,14 @@ import java.util.List;
  */
 @Service
 public class DepartmentServiceImpl implements DepartmentService {
-    @Resource
+	private static final Logger log = LoggerFactory.getLogger(DepartmentService.class);
+
+
+	@Resource
     private DepartmentMapper departmentMapper;
 
+	@Autowired
+	CacheManager cacheManager;
     /**
      * 通过ID查询单条数据
      *
@@ -26,8 +37,12 @@ public class DepartmentServiceImpl implements DepartmentService {
      * @return 实例对象
      */
     @Override
+    @Cacheable(value = "dept", unless="#result == null")
     public Department getById(Integer id) {
-        return this.departmentMapper.getByPrimaryKey(id);
+	    log.info("部门查询一次:"+id);
+	    Cache dept = cacheManager.getCache("dept");
+	    dept.put("dept-"+id,"缓存管理器操作");
+	    return this.departmentMapper.getByPrimaryKey(id);
     }
     
     /**
