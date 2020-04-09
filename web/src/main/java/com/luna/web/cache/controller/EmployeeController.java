@@ -58,6 +58,19 @@ public class EmployeeController {
 	}
 
 	/**
+	 * Select obj r.
+	 *
+	 * @param name
+	 * @return the r
+	 */
+	@ApiOperation(value = "查询详情", notes = "查询详情", httpMethod = "GET", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@GetMapping(value = "/name/{name}")
+	@ApiResponses({@ApiResponse(code = 200, message = "查询成功")})
+	public AjaxResult getByName(@PathVariable("name") String name) {
+		return AjaxResult.success("查询详情", employeeService.getByName(name));
+	}
+
+	/**
 	 * Insert obj.
 	 *
 	 * @param employee

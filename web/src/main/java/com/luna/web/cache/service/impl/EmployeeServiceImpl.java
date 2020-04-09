@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -149,4 +150,29 @@ public class EmployeeServiceImpl implements EmployeeService {
     	log.info("删除一次:"+id);
         return this.employeeMapper.deleteByPrimaryKey(id) > 0;
     }
+
+	/**
+	 * 通过名字查询数据
+	 * TODO Caching 复杂缓存
+	 *  标注 cachePut 注解一定在方法执行后执行 即使有key存在
+	 * @param name 主键
+	 * @return
+	 */
+	@Override
+	@Caching(
+			cacheable = {
+					@Cacheable(value = "emp", key =  "#name")
+			},
+			put = {
+					@CachePut(value = "emp", key = "#result.id"),
+					@CachePut(value = "emp", key = "#result.email")
+			}
+	)
+	public Employee getByName(String name) {
+    	log.info("名字查询:"+name);
+		Employee byName = this.employeeMapper.getByName(name);
+		return byName;
+	}
+
+
 }

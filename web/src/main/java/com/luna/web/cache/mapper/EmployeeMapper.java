@@ -3,6 +3,8 @@ package com.luna.web.cache.mapper;
 import com.luna.web.cache.entity.Employee;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+
 import java.util.List;
 
 /**
@@ -54,4 +56,11 @@ public interface EmployeeMapper {
      */
     int deleteByPrimaryKey(Integer id);
 
+	/**
+	 * 通过名字查数据
+	 *
+	 * @param name
+	 * @return
+	 */
+	Employee getByName(String name);
 }

@@ -21,7 +21,7 @@
     <!--通过实体作为筛选条件查询-->
     <select id="getAll" resultMap="EmployeeMap">
         select
-          id, name, email, gender, did
+        id, name, email, gender, did
         from employee
         <where>
             <if test="id != null">
@@ -42,34 +42,43 @@
         </where>
     </select>
 
+    <select id="getByName" resultMap="EmployeeMap" parameterType="string">
+        select
+          id, name, email, gender, did
+        from employee
+        where name = #{name}
+    </select>
+
     <!--新增所有列-->
     <insert id="insert" keyProperty="id" useGeneratedKeys="true">
         insert into employee
         (
-            <if test="name != null and name != ''">
-                name,
-            </if>
-            <if test="email != null and email != ''">
-                email,
-            </if>
-            <if test="gender != null and gender != ''">
-                gender,
-            </if>
-            <if test="departmentId != null">
-                did            </if>
+        <if test="name != null and name != ''">
+            name,
+        </if>
+        <if test="email != null and email != ''">
+            email,
+        </if>
+        <if test="gender != null and gender != ''">
+            gender,
+        </if>
+        <if test="departmentId != null">
+            did
+        </if>
         )
         values (
-            <if test="name != null and name != ''">
+        <if test="name != null and name != ''">
             #{name},
-            </if>
-            <if test="email != null and email != ''">
+        </if>
+        <if test="email != null and email != ''">
             #{email},
-            </if>
-            <if test="gender != null and gender != ''">
+        </if>
+        <if test="gender != null and gender != ''">
             #{gender},
-            </if>
-            <if test="departmentId != null">
-            #{departmentId}            </if>
+        </if>
+        <if test="departmentId != null">
+            #{departmentId}
+        </if>
         )
     </insert>
 
@@ -87,7 +96,8 @@
                 gender = #{gender} ,
             </if>
             <if test="departmentId != null">
-                did = #{departmentId}             </if>
+                did = #{departmentId}
+            </if>
         </set>
         where id = #{id}
     </update>

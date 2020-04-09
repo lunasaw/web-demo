@@ -51,4 +51,11 @@ public interface EmployeeService {
      */
     boolean deleteById(Integer id);
 
+	/**
+	 * 通过名字查询数据
+	 *
+	 * @param name 主键
+	 * @return 是否成功
+	 */
+	Employee getByName(String name);
 }
