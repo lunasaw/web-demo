@@ -7,3 +7,8 @@
 2020-04-10 14:00:17,174  INFO (RabbitMqService.java:27) - [B@434d91f1 
 2020-04-10 14:00:17,174  INFO (RabbitMqService.java:22) - 收到消息:Employee{id=1, name='李四', email='123213@qq.com', gender='0', departmentId=1} 
 2020-04-10 14:00:17,174  INFO (RabbitMqService.java:28) - MessageProperties [headers={__TypeId__=com.luna.web.cache.entity.Employee}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=exchange.fanout, receivedRoutingKey=, deliveryTag=3, consumerTag=amq.ctag-12IdM43ICZtGoVNy2kEQjg, consumerQueue=luna] 
+2020-04-10 17:12:06,456  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-10 17:12:38,352  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-10 17:14:42,580  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-10 17:29:47,124  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-10 21:36:10,237  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 

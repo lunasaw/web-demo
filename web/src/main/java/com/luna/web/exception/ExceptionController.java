@@ -4,11 +4,8 @@ import java.util.Date;
 
 import com.luna.common.core.domain.AjaxResult;
 import com.luna.common.utils.ServletUtils;
-import com.luna.framework.config.DruidConfig;
-import com.luna.web.jpa.controller.JpaUserController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;

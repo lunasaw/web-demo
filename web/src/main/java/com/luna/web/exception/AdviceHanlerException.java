@@ -2,10 +2,9 @@ package com.luna.web.exception;
 
 import com.luna.common.core.domain.AjaxResult;
 import com.luna.common.utils.ServletUtils;
-import com.luna.framework.config.DruidConfig;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
