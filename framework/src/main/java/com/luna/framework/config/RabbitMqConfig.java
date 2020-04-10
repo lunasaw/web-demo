@@ -21,7 +21,7 @@ public class RabbitMqConfig {
 	 *  1. Properties封装配置信息
 	 *  2. RabbitTemplate 封装发送和接收消息
 	 *  3. AmqpAdmin 系统管理组件 可以声明队列创建交换器
-	 *
+	 * TODO AmqpAdmin 创建 删除 queues exchange bingding
 	 */
 	@Bean
 	public MessageConverter messageConverter(){

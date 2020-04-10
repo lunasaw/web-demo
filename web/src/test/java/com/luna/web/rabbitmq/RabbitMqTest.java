@@ -4,11 +4,16 @@ import com.luna.web.cache.entity.Employee;
 import com.luna.web.cache.mapper.EmployeeMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.amqp.core.AmqpAdmin;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.DirectExchange;
+import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,8 +29,12 @@ public class RabbitMqTest {
 	@Autowired
 	RabbitTemplate rabbitTemplate;
 
-	@Autowired
+	@Resource
 	EmployeeMapper employeeMapper;
+
+	@Autowired
+	AmqpAdmin amqpAdmin;
+
 	/**
 	 * 1. 单播
 	 */
@@ -37,10 +46,10 @@ public class RabbitMqTest {
 		 * 	object 默认当成消息体 只需传入发送对象 自动序列化(默认使用java方式)发送给rabbitmq
 		 * 	    rabbitTemplate.convertAndSend(exchange,routeKey,Object);
 		 */
-		Map<String, Object> map=new HashMap<>();
-		map.put("msg","这是第一个消息");
-		map.put("data", Arrays.asList("helloworld",123,true));
-		rabbitTemplate.convertAndSend("exchange.direct","luna.news",employeeMapper.getByName("张三"));
+		Map<String, Object> map = new HashMap<>();
+		map.put("msg", "这是第一个消息");
+		map.put("data", Arrays.asList("helloworld", 123, true));
+		rabbitTemplate.convertAndSend("exchange.direct", "luna.news", employeeMapper.getByName("张三"));
 	}
 
 	/**
@@ -58,6 +67,16 @@ public class RabbitMqTest {
 	 */
 	@Test
 	public void cTest() {
-		rabbitTemplate.convertAndSend("exchange.fanout","",employeeMapper.getByName("李四"));
+		rabbitTemplate.convertAndSend("exchange.fanout", "", employeeMapper.getByName("李四"));
+	}
+
+	@Test
+	public void dTest() {
+//		amqpAdmin.declareExchange(new DirectExchange("amqpadmin.exchange"));
+//		amqpAdmin.declareQueue(new Queue("amqpadmin.queue",true));
+//		amqpAdmin.declareBinding(new Binding("amqpadmin.queue",Binding.DestinationType.QUEUE,"amqpadmin.exchange","amqp.luna",null));
+		System.out.println("创建完成");
+		amqpAdmin.deleteExchange("amqpadmin.exchange");
+		amqpAdmin.deleteQueue("amqpadmin.queue");
 	}
 }
