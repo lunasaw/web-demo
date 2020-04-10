@@ -1,71 +1,9 @@
-2020-04-09 09:46:32,981  INFO (EmployeeServiceImpl.java:86) - 查询一次:null 
-2020-04-09 09:46:48,187  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 09:47:08,353  INFO (EmployeeServiceImpl.java:171) - 名字查询:王五 
-2020-04-09 09:47:08,453  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 09:48:41,901  INFO (EmployeeServiceImpl.java:86) - 查询一次:Employee{id=2, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
-2020-04-09 09:49:09,646  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 09:50:07,850  INFO (EmployeeServiceImpl.java:171) - 名字查询:2 
-2020-04-09 09:50:08,009  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 09:52:22,527  INFO (EmployeeServiceImpl.java:171) - 名字查询:2 
-2020-04-09 09:52:22,685  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 09:52:45,972  INFO (EmployeeServiceImpl.java:171) - 名字查询:qq 
-2020-04-09 09:52:46,069  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 09:53:10,083  INFO (EmployeeServiceImpl.java:171) - 名字查询:qq 
-2020-04-09 09:53:13,308  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 09:55:19,577  INFO (EmployeeServiceImpl.java:171) - 名字查询:qq 
-2020-04-09 09:55:19,728  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 10:07:24,783  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 10:07:45,373  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 10:08:48,439  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 10:09:18,126  INFO (EmployeeServiceImpl.java:86) - 查询一次:null 
-2020-04-09 10:09:26,786  INFO (EmployeeServiceImpl.java:171) - 名字查询:张三 
-2020-04-09 10:09:37,083  INFO (EmployeeServiceImpl.java:171) - 名字查询:李四 
-2020-04-09 10:16:53,285  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 10:17:03,057  INFO (EmployeeServiceImpl.java:171) - 名字查询:zhangsan 
-2020-04-09 10:17:03,147  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 10:17:27,522  INFO (EmployeeServiceImpl.java:171) - 名字查询:张三 
-2020-04-09 10:18:00,758  INFO (EmployeeServiceImpl.java:171) - 名字查询:张三 
-2020-04-09 10:20:43,783  INFO (EmployeeServiceImpl.java:171) - 名字查询:张三 
-2020-04-09 10:27:29,761  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 10:31:59,595  INFO (EmployeeServiceImpl.java:171) - 名字查询:张三 
-2020-04-09 14:21:48,325  INFO (EmployeeServiceImpl.java:86) - 查询一次:null 
-2020-04-09 14:21:52,514  INFO (EmployeeServiceImpl.java:86) - 查询一次:null 
-2020-04-09 14:21:55,140  INFO (EmployeeServiceImpl.java:86) - 查询一次:null 
-2020-04-09 14:21:57,883  INFO (EmployeeServiceImpl.java:86) - 查询一次:Employee{id=4, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
-2020-04-09 15:30:18,285  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 15:35:40,719  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 15:38:31,249  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 15:40:23,332  INFO (EmployeeServiceImpl.java:86) - 查询一次:Employee{id=6, name='李四', email='123123@qq.com', gender='1', departmentId=1} 
-2020-04-09 15:51:02,565  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 15:53:54,375  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 15:57:22,940  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 15:59:43,085  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 16:38:20,488  INFO (EmployeeServiceImpl.java:86) - 查询一次:Employee{id=6, name='李四', email='123123@qq.com', gender='1', departmentId=1} 
-2020-04-09 16:41:18,792  INFO (EmployeeServiceImpl.java:86) - 查询一次:null 
-2020-04-09 16:41:18,796  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 16:42:59,067  INFO (EmployeeServiceImpl.java:86) - 查询一次:null 
-2020-04-09 16:42:59,068  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 16:43:06,792  INFO (EmployeeServiceImpl.java:172) - 名字查询:张三 
-2020-04-09 16:47:56,055  INFO (EmployeeServiceImpl.java:173) - 名字查询:张三 
-2020-04-09 16:48:05,534  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
-2020-04-09 16:48:10,303  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
-2020-04-09 16:48:12,276  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
-2020-04-09 16:52:45,030  INFO (DepartmentServiceImpl.java:37) - 部门查询一次: 
-2020-04-09 16:53:19,565  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
-2020-04-09 16:53:25,718  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=6, name='李四', email='123123@qq.com', gender='1', departmentId=1} 
-2020-04-09 17:18:13,431  INFO (DepartmentServiceImpl.java:42) - 部门查询一次: 
-2020-04-09 17:36:12,720  INFO (DepartmentServiceImpl.java:42) - 部门查询一次: 
-2020-04-09 17:36:44,386  INFO (DepartmentServiceImpl.java:42) - 部门查询一次:2 
-2020-04-09 17:36:44,900  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 17:37:21,854  INFO (DepartmentServiceImpl.java:42) - 部门查询一次:2 
-2020-04-09 17:37:48,470  INFO (DepartmentServiceImpl.java:42) - 部门查询一次:2 
-2020-04-09 18:02:53,747  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 18:03:17,098  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 18:03:44,369  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 18:04:17,352  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-09 18:09:40,255  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
-2020-04-09 18:09:48,322  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
-2020-04-09 18:09:53,007  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=6, name='李四', email='123123@qq.com', gender='1', departmentId=1} 
-2020-04-09 18:10:04,032  INFO (EmployeeServiceImpl.java:150) - 删除一次:6 
-2020-04-09 18:10:18,201  INFO (EmployeeServiceImpl.java:85) - 查询一次:null 
-2020-04-09 18:10:23,104  INFO (EmployeeServiceImpl.java:85) - 查询一次:Employee{id=4, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
+2020-04-10 13:56:39,488  INFO (RabbitMqService.java:22) - 收到消息:Employee{id=4, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
+2020-04-10 13:57:15,588  INFO (RabbitMqService.java:22) - 收到消息:Employee{id=1, name='李四', email='123213@qq.com', gender='0', departmentId=1} 
+2020-04-10 13:59:55,641  INFO (RabbitMqService.java:27) - [B@2709bca 
+2020-04-10 13:59:55,643  INFO (RabbitMqService.java:28) - MessageProperties [headers={__TypeId__=com.luna.web.cache.entity.Employee}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=exchange.fanout, receivedRoutingKey=, deliveryTag=1, consumerTag=amq.ctag-12IdM43ICZtGoVNy2kEQjg, consumerQueue=luna] 
+2020-04-10 13:59:55,654  INFO (RabbitMqService.java:27) - [B@64f1f5c 
+2020-04-10 13:59:55,655  INFO (RabbitMqService.java:28) - MessageProperties [headers={__TypeId__=com.luna.web.cache.entity.Employee}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=exchange.fanout, receivedRoutingKey=, deliveryTag=2, consumerTag=amq.ctag-12IdM43ICZtGoVNy2kEQjg, consumerQueue=luna] 
+2020-04-10 14:00:17,174  INFO (RabbitMqService.java:27) - [B@434d91f1 
+2020-04-10 14:00:17,174  INFO (RabbitMqService.java:22) - 收到消息:Employee{id=1, name='李四', email='123213@qq.com', gender='0', departmentId=1} 
+2020-04-10 14:00:17,174  INFO (RabbitMqService.java:28) - MessageProperties [headers={__TypeId__=com.luna.web.cache.entity.Employee}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=exchange.fanout, receivedRoutingKey=, deliveryTag=3, consumerTag=amq.ctag-12IdM43ICZtGoVNy2kEQjg, consumerQueue=luna] 
