@@ -1,14 +1,4 @@
-2020-04-10 13:56:39,488  INFO (RabbitMqService.java:22) - 收到消息:Employee{id=4, name='张三', email='123123@qq.com', gender='1', departmentId=2} 
-2020-04-10 13:57:15,588  INFO (RabbitMqService.java:22) - 收到消息:Employee{id=1, name='李四', email='123213@qq.com', gender='0', departmentId=1} 
-2020-04-10 13:59:55,641  INFO (RabbitMqService.java:27) - [B@2709bca 
-2020-04-10 13:59:55,643  INFO (RabbitMqService.java:28) - MessageProperties [headers={__TypeId__=com.luna.web.cache.entity.Employee}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=exchange.fanout, receivedRoutingKey=, deliveryTag=1, consumerTag=amq.ctag-12IdM43ICZtGoVNy2kEQjg, consumerQueue=luna] 
-2020-04-10 13:59:55,654  INFO (RabbitMqService.java:27) - [B@64f1f5c 
-2020-04-10 13:59:55,655  INFO (RabbitMqService.java:28) - MessageProperties [headers={__TypeId__=com.luna.web.cache.entity.Employee}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=exchange.fanout, receivedRoutingKey=, deliveryTag=2, consumerTag=amq.ctag-12IdM43ICZtGoVNy2kEQjg, consumerQueue=luna] 
-2020-04-10 14:00:17,174  INFO (RabbitMqService.java:27) - [B@434d91f1 
-2020-04-10 14:00:17,174  INFO (RabbitMqService.java:22) - 收到消息:Employee{id=1, name='李四', email='123213@qq.com', gender='0', departmentId=1} 
-2020-04-10 14:00:17,174  INFO (RabbitMqService.java:28) - MessageProperties [headers={__TypeId__=com.luna.web.cache.entity.Employee}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=exchange.fanout, receivedRoutingKey=, deliveryTag=3, consumerTag=amq.ctag-12IdM43ICZtGoVNy2kEQjg, consumerQueue=luna] 
-2020-04-10 17:12:06,456  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-10 17:12:38,352  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-10 17:14:42,580  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-10 17:29:47,124  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-10 21:36:10,237  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-04-11 14:28:47,746  INFO (AsyncService.java:16) - 数据处理中... 
+2020-04-11 14:28:58,745  INFO (AsyncService.java:16) - 数据处理中... 
+2020-04-11 14:29:05,563  INFO (AsyncService.java:16) - 数据处理中... 
+2020-04-11 14:32:54,528  INFO (AsyncService.java:22) - 数据处理中... 

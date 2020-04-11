@@ -4,6 +4,7 @@ import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 
 /**
@@ -17,8 +18,12 @@ import org.springframework.cache.annotation.EnableCaching;
  * 2. 配置主机地址
  * 3. 测试缓存
  */
+//开启缓存
 @EnableCaching
+//开启消息中间件
 @EnableRabbit
+//开启异步功能
+@EnableAsync
 @SpringBootApplication
 public class WebApplication {
 
