@@ -70,10 +70,4 @@ public class JestTest {
 		System.out.println(execute.getJsonString());
 	}
 
-
-//	@Test
-//	public void cTest() {
-//		Article article = new Article();
-//		articleRepository.index(article);
-//	}
 }

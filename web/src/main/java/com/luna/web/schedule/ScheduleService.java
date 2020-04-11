@@ -27,9 +27,9 @@ public class ScheduleService {
 	 * @Scheduled(cron = "0 0 2 ? * 6L MON-SAT") //每个月的最后一个工作日凌晨两点执行一次
 	 * @Scheduled(cron = "0 0 2-4 ? * 1#1 MON-SAT") //每个月的第一周凌晨2点到4点 每个整点执行一次
 	 */
-	@Scheduled(cron = "0/4 * * * * MON-SAT") // 每四秒一次
-	public void schedule(){
-		log.info("定时任务启动");
-	}
+//	@Scheduled(cron = "0/4 * * * * MON-SAT") // 每四秒一次
+//	public void schedule(){
+//		log.info("定时任务启动");
+//	}
 
 }

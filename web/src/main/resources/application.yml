@@ -20,7 +20,6 @@ luna:
 logging:
   config: classpath:log/logback.xml
 
-
 # 用户配置
 user:
   password:
@@ -59,6 +58,17 @@ spring:
       # 热部署开关
       enabled: true
 
+  #邮箱操作
+  mail:
+    username: 1173282254@qq.com
+    password: udbxadzstgldhbeh
+    host: smtp.qq.com
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+
 # MyBatis
 mybatis:
   # 搜索指定包别名
@@ -75,6 +85,7 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
+
 
 
 

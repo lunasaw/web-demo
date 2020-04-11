@@ -29,7 +29,7 @@
 						<td>[[${user.name}]]</td>
 						<td th:text="${user.gender}==0?'女':'男'"></td>
 						<td th:text="${#dates.format(user.birth,'yyyy-MM-dd')}"></td>
-						<td th:text="${user.departmentDO.name}"></td>
+						<td th:text="${user.department.name}"></td>
 						<td>
 							<a th:href="@{/crud/user/}+${user.id}" class="bottom btn btn-success">编辑</a>
 							<button th:attr="del_uri=@{/crud/user/}+${user.id}" type="submit"
