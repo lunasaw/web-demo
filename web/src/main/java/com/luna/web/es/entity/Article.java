@@ -57,4 +57,13 @@ public class Article implements Serializable {
         this.content = content;
     }
 
+	@Override
+	public String toString() {
+		return "Article{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", title='" + title + '\'' +
+				", content='" + content + '\'' +
+				'}';
+	}
 }
