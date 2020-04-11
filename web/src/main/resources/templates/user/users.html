@@ -1,6 +1,6 @@
 <!DOCTYPE html >
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="components/head::header('用户信息')"></head>
+<head th:replace="include::header('用户信息')"></head>
 <body class="gray-bg">
 <div class="panel-group">
 	<div class="panel-default panel">
@@ -114,7 +114,7 @@
 </div>
 
 
-<th:block th:include="components/lib :: footer"/>
+<th:block th:include="include :: footer"/>
 <script>
     $(".deleteBtn").click(function () {
         //删除指定员工
@@ -149,7 +149,7 @@
                     title: '用户生日'
                 },
                 {
-                    field: 'departmentDO.name',
+                    field: 'department.name',
                     title: '用户部门'
                 },
                 // {

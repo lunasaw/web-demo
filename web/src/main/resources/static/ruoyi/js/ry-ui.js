@@ -871,7 +871,8 @@ var table = {
         	        type: type,
         	        dataType: dataType,
         	        data: data,
-        	        beforeSend: function () {
+        	        beforeSend: function (xhr) {
+                        xhr.setRequestHeader(header, token);
         	        	$.modal.loading("正在处理中，请稍后...");
         	        },
         	        success: function(result) {

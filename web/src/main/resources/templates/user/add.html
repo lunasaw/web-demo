@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<th:block th:include="components/head::header('用户添加')"/>
-	<th:block th:include="components/lib ::datetimepicker-css"/>
+	<th:block th:include="include ::header('用户添加')"/>
+	<th:block th:include="include ::datetimepicker-css"/>
 </head>
 <body>
 <div class="panel-default panel">
@@ -73,8 +73,8 @@
 		</div>
 	</div>
 </div>
-<th:block th:include="components/lib :: footer"/>
-<th:block th:include="components/lib :: datetimepicker-js"/>
+<th:block th:include="include :: footer"/>
+<th:block th:include="include :: datetimepicker-js"/>
 <script type="text/javascript">
     $(function () {
 

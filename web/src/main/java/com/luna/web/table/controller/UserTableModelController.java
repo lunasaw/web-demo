@@ -32,7 +32,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/pageUser")
 public class UserTableModelController extends BaseController {
-	private String prefix = "/pageUser";
+	private String prefix = "pageUser";
 
 	@Autowired
 	private UserTableModelDAO userTableModelDAO;

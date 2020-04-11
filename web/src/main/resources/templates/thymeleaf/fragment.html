@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<th:block th:include="components/head::header('模板片段')"/>
+	<th:block th:include="include::header('模板片段')"/>
 </head>
 <body>
 <div class="panel-group">
@@ -216,6 +216,6 @@
 		</div>
 	</div>
 </div>
-	<th:block th:include="components/lib :: footer"/>
+	<th:block th:include="include :: footer"/>
 </body>
 </html>

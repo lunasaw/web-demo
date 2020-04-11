@@ -224,3 +224,5 @@
 2020-04-11 15:32:40,003  INFO (ScheduleService.java:32) - 定时任务启动 
 2020-04-11 15:32:44,002  INFO (ScheduleService.java:32) - 定时任务启动 
 2020-04-11 15:32:48,002  INFO (ScheduleService.java:32) - 定时任务启动 
+2020-04-11 23:28:05,358  INFO (MyHandlerExceptionResolver.java:19) - 优先级第三 实现HandlerExceptionResolver 处理全局异常! 
+2020-04-11 23:45:09,186  INFO (UserService.java:31) - html方式调用后台 

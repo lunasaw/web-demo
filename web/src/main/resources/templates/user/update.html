@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<th:block th:include="components/head::header('用户修改')"/>
-	<th:block th:include="components/lib ::datetimepicker-css"/>
+	<th:block th:include="include::header('用户修改')"/>
+	<th:block th:include="include::datetimepicker-css"/>
 </head>
 <body>
 <div class="panel-default panel">
@@ -60,8 +60,8 @@
 
 								<div class="form-group">
 									<label class="font-noraml">部门:</label>
-									<select class="form-control" th:name="departmentDO.id">
-										<option th:selected="${dept.id == user.departmentDO.id}" th:each="dept:${depts}"
+									<select class="form-control" th:name="department.id">
+										<option th:selected="${dept.id == user.department.id}" th:each="dept:${depts}"
 										        th:text="${dept.name}"
 										        th:value="${dept.id}"></option>
 									</select>
@@ -79,8 +79,8 @@
 		</div>
 	</div>
 </div>
-<th:block th:include="components/lib :: footer"/>
-<th:block th:include="components/lib :: datetimepicker-js"/>
+<th:block th:include="include :: footer"/>
+<th:block th:include="include :: datetimepicker-js"/>
 <script type="text/javascript">
     $(function () {
 

@@ -58,10 +58,10 @@ public class JavaMail {
 		//获取类路径下
 		String path = ResourceUtils.getURL("classpath:static/").getPath();
 		//上传文件
-		mimeMessageHelper.addAttachment("favicon.ico",new File(path+"favicon.ico"));
-		mimeMessageHelper.addAttachment("luna.png",new File(path+"luna.png"));
+//		mimeMessageHelper.addAttachment("favicon.ico",new File(path+"favicon.ico"));
+//		mimeMessageHelper.addAttachment("luna.png",new File(path+"luna.png"));
 		//发送人地址
-		mimeMessageHelper.setTo("15696756582@163.com");
+		mimeMessageHelper.setTo("864636142@qq.com");
 //		mimeMessageHelper.setFrom("1173282254@qq.com");
 		//设置自定义发件人昵称
 		String nick="";

@@ -68,7 +68,7 @@
 	<script th:inline="javascript">
         var editFlag = "";
         var removeFlag = "";
-		var prefix = ctx + "/pageUser";
+		var prefix = ctx + "pageUser";
 
 		$(function() {
 		    var panehHidden = false;
@@ -144,7 +144,7 @@
 
         function queryDeptTree()
 		{
-			var url = ctx + "/dept/treeData";
+			var url = ctx + "dept/treeData";
 			var options = {
 		        url: url,
 		        expandLevel: 2,

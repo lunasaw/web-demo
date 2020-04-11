@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<th:block th:include="components/head::header('用户添加')"/>
+	<th:block th:include="include::header('用户添加')"/>
 </head>
 <body>
 <div class="panel-group">
@@ -179,6 +179,6 @@
 
 
 <!-- 全局js -->
-<th:block th:include="components/lib :: footer"/>
+<th:block th:include="include :: footer"/>
 </body>
 </html>

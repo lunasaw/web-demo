@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/dept")
 public class DeptController extends BaseController
 {
-    private String prefix = "/dept";
+    private String prefix = "dept";
 
     @Autowired
     private IDeptService deptService;
