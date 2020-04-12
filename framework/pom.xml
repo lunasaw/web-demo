@@ -58,6 +58,13 @@
             <version>5.3.3</version>
         </dependency>
 
+        <!-- thymeleaf模板引擎和security框架的整合 -->
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+            <version>3.0.4.RELEASE</version>
+        </dependency>
+
         <!--消息队列 -->
         <dependency>
             <groupId>org.springframework</groupId>

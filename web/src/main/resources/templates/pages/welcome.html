@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -13,7 +13,7 @@
 <div sec:authorize="isAuthenticated()">
 	<h2><span sec:authentication="name"></span>!您好,您的角色有：
 		<span sec:authentication="principal.authorities"></span></h2>
-	<form th:action="@{/security/logout}" method="post">
+	<form th:action="@{/logout}" method="post">
 		<input type="submit" value="注销"/>
 	</form>
 </div>
