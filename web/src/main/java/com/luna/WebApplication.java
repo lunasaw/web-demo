@@ -31,7 +31,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class WebApplication {
 
 	static{
-		System.out.println("启动加载属性");
+		System.out.println("启动加载属性--start");
 		System.setProperty("es.set.netty.runtime.available.processors", "false");
 	}
 
