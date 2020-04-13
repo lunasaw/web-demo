@@ -12,9 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @EnableDubbo
-public class ProviderTicketApplication {
+public class ProvideApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProviderTicketApplication.class, args);
+		SpringApplication.run(ProvideApplication.class, args);
 	}
 }

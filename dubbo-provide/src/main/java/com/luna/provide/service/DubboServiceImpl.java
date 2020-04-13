@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Service //将服务发布出去
-public class TicketServiceImpl implements TicketService {
+public class DubboServiceImpl implements DubboService {
     @Override
-    public String getTicket(String name) {
-        return "dubbo:"+name;
+    public String getDubbo(String name) {
+        return "dubbo"+name;
     }
 }
