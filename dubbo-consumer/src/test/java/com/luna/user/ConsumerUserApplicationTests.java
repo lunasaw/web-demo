@@ -17,7 +17,7 @@ public class ConsumerUserApplicationTests {
 	@Test
 	public void contextLoads() {
 
-		userService.hello();
+		userService.hello("luna");
 	}
 
 }

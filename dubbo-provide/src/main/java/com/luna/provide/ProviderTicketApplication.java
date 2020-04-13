@@ -1,4 +1,4 @@
-package com.luna.ticket;
+package com.luna.provide;
 
 import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;

@@ -1,4 +1,4 @@
-package com.luna.ticket;
+package com.luna.provide;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
