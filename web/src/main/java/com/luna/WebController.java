@@ -1,4 +1,4 @@
-package com.luna.web.user.controller;
+package com.luna;
 
 import com.luna.web.user.entity.UserDO;
 import org.springframework.stereotype.Controller;
@@ -15,7 +15,6 @@ import java.util.*;
  */
 @Controller
 public class WebController {
-
 
 	@GetMapping("demo")
 	public String web(ModelMap map) {
@@ -129,5 +128,10 @@ public class WebController {
 	@GetMapping("management")
 	public String management(ModelMap map) {
 		return "thymeleaf/management";
+	}
+
+	@GetMapping("/baiduMap")
+	public String baiduApi(){
+		return "baiduMap/baiduMap";
 	}
 }

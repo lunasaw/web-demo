@@ -38,7 +38,7 @@ public class JavaMail {
 		//内容
 		simpleMailMessage.setText("排位");
 		//发送人地址
-		simpleMailMessage.setTo("15696756582@163.com");
+		simpleMailMessage.setTo("864636142@163.com");
 		simpleMailMessage.setFrom("1173282254@qq.com");
 
 		javaMailSender.send(simpleMailMessage);
