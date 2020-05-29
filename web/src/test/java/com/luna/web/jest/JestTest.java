@@ -38,7 +38,7 @@ public class JestTest {
 	 *
 	 * @throws IOException
 	 */
-	@Test
+//	@Test
 	public void aTest() throws IOException {
 		// 给ES 索引中保存一个文档
 		Article article = articleMapper.getByPrimaryKey(1);
@@ -55,7 +55,7 @@ public class JestTest {
 	 *
 	 * @throws IOException
 	 */
-	@Test
+//	@Test
 	public void bTest() throws IOException {
 		//查询表达式
 		String json = "{\n" +
