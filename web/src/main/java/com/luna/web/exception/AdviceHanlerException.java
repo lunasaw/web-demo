@@ -21,6 +21,7 @@ public class AdviceHanlerException {
 	@ExceptionHandler(value = RuntimeException.class)
 	@ResponseBody
 	public Object fix(HttpServletRequest request,Exception ex){
+		ex.printStackTrace();
 		log.info("优先第二 do This @ControllerAdvice+@ExceptionHandler");
 		if (ServletUtils.isAjaxRequest(request)){
 			return AjaxResult.error(ex.getMessage());

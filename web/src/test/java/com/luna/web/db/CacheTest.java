@@ -5,12 +5,14 @@ import com.luna.web.cache.mapper.EmployeeMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Luna@win10
@@ -35,6 +37,7 @@ public class CacheTest {
 	@Autowired
     RedisTemplate<String, Object> objectRedisTemplate;
 
+
     /**
      * redis 常用操作
      */
@@ -42,14 +45,15 @@ public class CacheTest {
     public void aTest() {
         // String =>stringRedisTemplate.opsForValue()
         // TODO 保存数据
-        stringRedisTemplate.opsForValue().append("luna", "iszychen");
+        stringRedisTemplate.opsForValue().append("luna1", "iszychen1");
         // TODO 获取数据
-        String luna = stringRedisTemplate.opsForValue().get("luna");
+        String luna = stringRedisTemplate.opsForValue().get("luna1");
+	    stringRedisTemplate.expire("luna1",3000, TimeUnit.SECONDS);
         System.out.println(luna);
         // List
-        stringRedisTemplate.opsForList().leftPush("myList", "1");
-        stringRedisTemplate.opsForList().leftPush("myList", "2");
-        stringRedisTemplate.opsForList().leftPush("myList", "3");
+//        stringRedisTemplate.opsForList().leftPush("myList", "1");
+//        stringRedisTemplate.opsForList().leftPush("myList", "2");
+//        stringRedisTemplate.opsForList().leftPush("myList", "3");
         // Set =>stringRedisTemplate.opsForSet()
         // Hash =>stringRedisTemplate.opsForHash()
         // Zset =>stringRedisTemplate.opsForZSet()

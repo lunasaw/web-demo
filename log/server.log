@@ -1,2 +1,7 @@
-2020-04-12 13:38:45,332  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
-2020-04-12 13:39:10,484  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-05-17 10:51:09,978  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-05-17 10:53:01,501  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-05-17 10:54:07,779  INFO (AdviceHanlerException.java:24) - 优先第二 do This @ControllerAdvice+@ExceptionHandlerjava.lang.NullPointerException 
+2020-05-17 10:55:29,922  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-05-17 10:56:10,770  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-05-17 11:00:00,862  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
+2020-05-17 11:01:51,057  INFO (AdviceHanlerException.java:25) - 优先第二 do This @ControllerAdvice+@ExceptionHandler 
