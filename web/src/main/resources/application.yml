@@ -18,7 +18,7 @@ luna:
 
 # 日志配置
 logging:
-  config: classpath:log/logback.xml
+  config: classpath:log/logback-spring.xml
 
 # 用户配置
 user:
